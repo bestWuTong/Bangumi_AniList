@@ -1,0 +1,39 @@
+name: Update Bangumi Data
+
+on:
+  schedule:
+    # 每天北京时间凌晨 04:00 运行（UTC 20:00）
+    - cron: '0 20 * * *'
+  workflow_dispatch:  # 支持手动触发
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  fetch-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch Bangumi data
+        run: python scripts/fetch_bangumi.py
+
+      - name: Commit updated data
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add bangumi.json
+          git diff --staged --quiet || git commit -m "chore: update bangumi data [skip ci]"
+          git push
