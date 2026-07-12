@@ -22,7 +22,6 @@ if os.path.exists(config_path):
     with open(config_path, "r", encoding="utf-8") as f:
         config = json.load(f)
     USER_ID = config.get("user_id")
-    NICKNAME = config.get("nickname", "")
 else:
     print("错误: 未找到 config.json 文件")
     print("请创建 config.json 并添加 user_id 字段")
@@ -286,7 +285,6 @@ def main():
     output = {
         "last_updated": datetime.now(timezone.utc).isoformat(),
         "user": username,
-        "nickname": NICKNAME,
         "total": len(anime_list),
         "anime_list": anime_list,
     }
