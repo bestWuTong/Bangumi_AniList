@@ -1,11 +1,11 @@
 {
   "user_id": "wutong",
-  "nickname": "WuTong",
+  "nickname": "無同",
   "show_cover": false,
   "show_name_cn": true,
   "show_type": true,
   "show_status": true,
-  "show_progress": true,
+  "show_progress": false,
   "show_air_date": true,
   "show_summary": true,
   "show_score": true,
