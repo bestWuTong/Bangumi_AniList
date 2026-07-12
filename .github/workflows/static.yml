@@ -6,6 +6,12 @@ on:
   push:
     branches: ["main"]
 
+  # 当 update-bangumi 工作流完成后自动触发
+  workflow_run:
+    workflows: ["Update Bangumi Data"]
+    types:
+      - completed
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
