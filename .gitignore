@@ -23,8 +23,4 @@ node_modules/
 # Logs
 *.log
 
-# Sort tool
-sort-tool/.auth_state
-sort-tool/app_config.json
-
 .mimocode/
