@@ -1,257 +1,318 @@
-// 追番列表前端逻辑
-const AnimeList = {
-    data: null,
+const App = {
     config: null,
+    data: null,
     currentFilter: 'all',
     searchQuery: '',
 
-    // 初始化
+    STATUS_MAP: { 1: '想看', 2: '看过', 3: '在看', 4: '搁置', 5: '抛弃' },
+
     async init() {
-        await this.loadConfig();
-        await this.loadData();
+        await Promise.all([this.loadConfig(), this.loadData()]);
+        this.setupBackground();
+        this.setupHeader();
+        this.setupNav();
+        this.render();
         this.bindEvents();
     },
 
-    // 加载配置
     async loadConfig() {
         try {
-            const response = await fetch('config.json');
-            if (response.ok) {
-                this.config = await response.json();
-            }
-        } catch (error) {
-            console.warn('加载配置失败，使用默认值');
+            const resp = await fetch('config.json');
+            if (resp.ok) this.config = await resp.json();
+        } catch (e) {
+            console.warn('配置加载失败');
         }
     },
 
-    // 加载数据
     async loadData() {
         try {
-            const response = await fetch('bangumi.json');
-            if (!response.ok) {
-                throw new Error('数据加载失败');
-            }
-            this.data = await response.json();
-            this.updateHeader();
-            this.render();
-        } catch (error) {
-            console.error('加载数据失败:', error);
+            const resp = await fetch('bangumi.json');
+            if (!resp.ok) throw new Error('数据加载失败');
+            this.data = await resp.json();
+        } catch (e) {
+            console.error('数据加载失败:', e);
             document.getElementById('anime-grid').innerHTML =
                 '<div class="no-results">数据加载失败，请稍后重试</div>';
         }
     },
 
-    // 更新头部信息
-    updateHeader() {
-        if (!this.data) return;
+    // 背景设置
+    setupBackground() {
+        if (!this.config) return;
+        const overlay = document.querySelector('.bg-overlay');
+        const isMobile = window.innerWidth <= 768;
+        const bgUrl = isMobile ? this.config.background_mobile : this.config.background;
+        if (bgUrl) {
+            overlay.style.backgroundImage = `url(${bgUrl})`;
+        }
 
-        const nickname = this.config?.nickname || this.data.user;
-        document.getElementById('username').textContent = nickname;
-        document.title = `追番列表 - ${nickname}`;
-
-        // 格式化更新时间
-        const updateTime = new Date(this.data.last_updated);
-        const formatted = updateTime.toLocaleString('zh-CN', {
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
-            hour: '2-digit',
-            minute: '2-digit',
-        });
-        document.getElementById('update-time').textContent = formatted;
+        // Favicon
+        if (this.config.favicon) {
+            document.getElementById('favicon').href = this.config.favicon;
+        }
     },
 
-    // 绑定事件
+    // 头部设置
+    setupHeader() {
+        if (!this.config || !this.data) return;
+        const nickname = this.config.nickname || this.data.username || '';
+        document.getElementById('nickname').textContent = nickname;
+        document.title = `${nickname}的追番列表`;
+
+        // 更新时间
+        if (this.data.last_updated) {
+            const d = new Date(this.data.last_updated);
+            document.getElementById('update-time').textContent = d.toLocaleString('zh-CN');
+        }
+
+        // 头像
+        const avatarEl = document.getElementById('avatar');
+        if (this.config.avatar) {
+            avatarEl.src = this.config.avatar;
+            avatarEl.style.display = 'block';
+        } else {
+            avatarEl.style.display = 'none';
+        }
+
+        // Bangumi 按钮
+        const baseUrl = this.config.bangumi_mirror || 'https://bgm.tv/';
+        const bangumiBtn = document.getElementById('bangumi-btn');
+        bangumiBtn.href = `${baseUrl}user/${this.data.username}`;
+    },
+
+    // 导航栏计数
+    setupNav() {
+        if (!this.data) return;
+        const collections = this.data.collections || [];
+        const counts = { all: 0, 1: 0, 2: 0, 3: 0, 4: 0 };
+        collections.forEach(c => {
+            if (c.type === 5) return; // 跳过抛弃
+            counts.all++;
+            if (counts[c.type] !== undefined) counts[c.type]++;
+        });
+        document.getElementById('count-all').textContent = counts.all;
+        document.getElementById('count-doing').textContent = counts[3];
+        document.getElementById('count-done').textContent = counts[2];
+        document.getElementById('count-wish').textContent = counts[1];
+        document.getElementById('count-onhold').textContent = counts[4];
+    },
+
+    // 事件绑定
     bindEvents() {
-        // 筛选按钮
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                this.currentFilter = btn.dataset.status;
+        // 筛选标签（只处理有 data-status 的按钮）
+        document.querySelectorAll('.nav-tab[data-status]').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.nav-tab[data-status]').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                this.currentFilter = tab.dataset.status;
                 this.render();
             });
         });
 
-        // 搜索框
-        document.getElementById('search').addEventListener('input', (e) => {
+        // 搜索
+        const searchInput = document.getElementById('search');
+        searchInput.addEventListener('input', (e) => {
             this.searchQuery = e.target.value.toLowerCase();
             this.render();
         });
+
+        // 移动端搜索切换
+        document.getElementById('search-toggle').addEventListener('click', (e) => {
+            e.stopPropagation();
+            searchInput.classList.toggle('active');
+            if (searchInput.classList.contains('active')) {
+                searchInput.focus();
+            }
+        });
+
+        // 弹窗关闭
+        document.getElementById('modal-close').addEventListener('click', () => this.closeModal());
+        document.getElementById('modal-overlay').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) this.closeModal();
+        });
+
+        // 返回顶部
+        const backBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backBtn.classList.add('visible');
+            } else {
+                backBtn.classList.remove('visible');
+            }
+        });
+        backBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ESC 关闭弹窗
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') this.closeModal();
+        });
+
+        // 窗口大小变化更新背景
+        window.addEventListener('resize', () => this.setupBackground());
     },
 
     // 筛选数据
     getFilteredData() {
         if (!this.data) return [];
+        let list = this.data.collections || [];
 
-        let list = this.data.anime_list || [];
+        // 过滤抛弃
+        list = list.filter(c => c.type !== 5);
 
         // 按状态筛选
         if (this.currentFilter !== 'all') {
-            list = list.filter(a => a.status === this.currentFilter);
+            const filterType = parseInt(this.currentFilter);
+            list = list.filter(c => c.type === filterType);
         }
 
-        // 按搜索词筛选
+        // 搜索
         if (this.searchQuery) {
-            list = list.filter(a =>
-                a.name.toLowerCase().includes(this.searchQuery) ||
-                (a.name_cn && a.name_cn.toLowerCase().includes(this.searchQuery))
-            );
+            list = list.filter(c => {
+                const s = c.subject || {};
+                const name = (s.name || '').toLowerCase();
+                const nameCn = (s.name_cn || '').toLowerCase();
+                return name.includes(this.searchQuery) || nameCn.includes(this.searchQuery);
+            });
         }
 
         return list;
     },
 
-    // 渲染统计信息
-    renderStats() {
-        if (!this.data) return;
-
-        const list = this.data.anime_list || [];
-        const stats = {
-            total: list.length,
-            watching: list.filter(a => a.status === '在看').length,
-            watched: list.filter(a => a.status === '看过').length,
-            wish: list.filter(a => a.status === '想看').length,
-        };
-
-        const statsHtml = `
-            <div class="stat-card">
-                <div class="number">${stats.total}</div>
-                <div class="label">总计</div>
-            </div>
-            <div class="stat-card">
-                <div class="number">${stats.watching}</div>
-                <div class="label">在看</div>
-            </div>
-            <div class="stat-card">
-                <div class="number">${stats.watched}</div>
-                <div class="label">看过</div>
-            </div>
-            <div class="stat-card">
-                <div class="number">${stats.wish}</div>
-                <div class="label">想看</div>
-            </div>
-        `;
-
-        document.getElementById('stats').innerHTML = statsHtml;
+    // 图片 URL 处理
+    getImageUrl(url) {
+        if (!url) return '';
+        if (this.config && this.config.bangumi_image_mirror) {
+            return url.replace('https://lain.bgm.tv/', this.config.bangumi_image_mirror);
+        }
+        return url;
     },
 
-    // 渲染番剧卡片
-    renderCard(anime) {
-        const config = this.config || {};
+    // 获取 Bangumi 链接
+    getBangumiUrl(type, id) {
+        const baseUrl = (this.config && this.config.bangumi_mirror) || 'https://bgm.tv/';
+        return `${baseUrl}${type}/${id}`;
+    },
 
-        // 名称显示
-        const displayName = config.show_name_cn !== false ? (anime.name_cn || anime.name) : anime.name;
-        const originalName = config.show_name_cn !== false && anime.name_cn ? anime.name : '';
+    // 渲染番剧列表
+    render() {
+        const list = this.getFilteredData();
+        const grid = document.getElementById('anime-grid');
 
-        // 进度
-        const epsW = anime.eps_watched || 0;
-        const epsT = anime.eps_total || 0;
-        const progress = epsT > 0 ? Math.round((epsW / epsT) * 100) : 0;
+        if (list.length === 0) {
+            grid.innerHTML = '<div class="no-results">没有找到匹配的番剧</div>';
+            return;
+        }
 
-        // 封面图
-        const coverHtml = config.show_cover && anime.cover
-            ? `<img class="anime-cover" src="${anime.cover}" alt="${displayName}" loading="lazy">`
-            : '';
+        grid.innerHTML = list.map((c, i) => this.renderCard(c, i)).join('');
+    },
 
-        // 状态标签
-        const statusHtml = config.show_status !== false
-            ? `<span class="meta-tag status status-${anime.status}">${anime.status}</span>`
-            : '';
+    renderCard(collection, index) {
+        const subject = collection.subject || {};
+        const nameCn = subject.name_cn || subject.name || '未知';
+        const coverUrl = this.getImageUrl(subject.images?.common);
+        const showCover = this.config?.show_cover !== false;
 
-        // 类型标签
-        const typeHtml = config.show_type !== false
-            ? `<span class="meta-tag">${anime.type}</span>`
-            : '';
-
-        // 集数标签
-        const epsHtml = epsT > 0
-            ? `<span class="meta-tag">${epsW}/${epsT} 集</span>`
-            : '';
-
-        // 评分
-        const scoreHtml = config.show_score !== false && anime.score > 0
-            ? `<span class="meta-tag score">${anime.score}</span>`
-            : '';
-
-        // 标签
-        const tags = anime.tags || [];
-        const tagsHtml = config.show_tags !== false && tags.length > 0
-            ? `<div class="anime-tags">${tags.map(t => `<span class="anime-tag">${this.escapeHtml(t)}</span>`).join('')}</div>`
-            : '';
-
-        // 进度条
-        const progressHtml = config.show_progress !== false
-            ? `<div class="anime-progress">${epsT > 0 ? `进度: ${progress}%` : '集数未知'}</div>
-               <div class="progress-bar"><div class="progress-fill" style="width: ${progress}%"></div></div>`
-            : '';
-
-        // 开播时间
-        const airDateHtml = config.show_air_date !== false && anime.air_date
-            ? `<div class="anime-date">开播: ${anime.air_date}</div>`
-            : '';
-
-        // 简介
-        const summary = anime.summary || '';
-        const truncatedSummary = summary.length > 100 ? summary.substring(0, 100) + '...' : summary;
-        const summaryHtml = config.show_summary !== false && truncatedSummary
-            ? `<div class="anime-summary">${this.escapeHtml(truncatedSummary)}</div>`
+        const coverHtml = showCover
+            ? (coverUrl
+                ? `<div class="anime-cover-wrapper"><img class="anime-cover" src="${coverUrl}" alt="${this.esc(nameCn)}" loading="lazy"></div>`
+                : `<div class="anime-cover-wrapper"><div class="anime-cover-placeholder">♪</div></div>`)
             : '';
 
         return `
-            <div class="anime-card" data-id="${anime.id}">
+            <div class="anime-card" data-index="${index}">
                 ${coverHtml}
-                <div class="anime-info">
-                    <div class="anime-title">${this.escapeHtml(displayName)}</div>
-                    ${originalName ? `<div class="anime-title-en">${this.escapeHtml(originalName)}</div>` : ''}
-                    <div class="anime-meta">
-                        ${statusHtml}
-                        ${typeHtml}
-                        ${epsHtml}
-                        ${scoreHtml}
+                <div class="anime-card-info">
+                    <div class="anime-card-title">${this.esc(nameCn)}</div>
+                    <div class="anime-card-meta">
+                        ${subject.score > 0 ? `
+                            <div class="anime-card-score">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                ${subject.score}
+                            </div>
+                        ` : ''}
+                        <span class="anime-card-status status-${collection.type}">${this.STATUS_MAP[collection.type]}</span>
                     </div>
-                    ${tagsHtml}
-                    ${progressHtml}
-                    ${airDateHtml}
-                    ${summaryHtml}
                 </div>
             </div>
         `;
     },
 
-    // 转义HTML
-    escapeHtml(str) {
+    // 打开弹窗
+    openModal(index) {
+        const list = this.getFilteredData();
+        const collection = list[index];
+        if (!collection) return;
+
+        const subject = collection.subject || {};
+        const nameCn = subject.name_cn || subject.name || '未知';
+        const showCover = this.config?.show_cover !== false;
+        const coverUrl = this.getImageUrl(subject.images?.common);
+
+        // 封面
+        const coverWrap = document.querySelector('.modal-cover-wrap');
+        const coverEl = document.getElementById('modal-cover');
+        if (showCover && coverUrl) {
+            coverWrap.style.display = '';
+            coverEl.src = coverUrl;
+        } else {
+            coverWrap.style.display = 'none';
+        }
+
+        // 名称
+        document.getElementById('modal-name-cn').textContent = nameCn;
+        document.getElementById('modal-name').textContent = subject.name || '';
+
+        // Bangumi 按钮
+        document.getElementById('modal-bangumi-btn').href = this.getBangumiUrl('subject', subject.id);
+
+        // 信息
+        document.getElementById('modal-status').textContent = this.STATUS_MAP[collection.type];
+        document.getElementById('modal-score').textContent = subject.score > 0 ? `${subject.score} 分` : '暂无评分';
+        document.getElementById('modal-eps').textContent = subject.eps > 0 ? `${subject.eps} 集` : '未知';
+        document.getElementById('modal-date').textContent = subject.date || '未知';
+
+        // 标签
+        const tagsEl = document.getElementById('modal-tags');
+        const tags = subject.tags || [];
+        if (tags.length > 0) {
+            tagsEl.innerHTML = tags.map(t => `<span class="modal-tag">${this.esc(t.name || t)}</span>`).join('');
+        } else {
+            tagsEl.innerHTML = '<span style="color: var(--text-muted)">暂无标签</span>';
+        }
+
+        // 简介
+        const summary = subject.short_summary || subject.summary || '暂无简介';
+        document.getElementById('modal-summary').textContent = summary;
+
+        // 显示弹窗
+        document.getElementById('modal-overlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    },
+
+    closeModal() {
+        document.getElementById('modal-overlay').classList.remove('active');
+        document.body.style.overflow = '';
+    },
+
+    esc(str) {
         if (!str) return '';
         const div = document.createElement('div');
         div.textContent = str;
         return div.innerHTML;
-    },
-
-    // 主渲染函数
-    render() {
-        this.renderStats();
-
-        const filteredList = this.getFilteredData();
-        const grid = document.getElementById('anime-grid');
-
-        if (filteredList.length === 0) {
-            grid.innerHTML = '<div class="no-results">没有找到匹配的番剧</div>';
-            return;
-        }
-
-        // 按状态排序: 在看 > 想看 > 看过 > 搁置
-        const statusOrder = { '在看': 0, '想看': 1, '看过': 2, '搁置': 3, '抛弃': 4 };
-        filteredList.sort((a, b) => {
-            const orderA = statusOrder[a.status] ?? 5;
-            const orderB = statusOrder[b.status] ?? 5;
-            return orderA - orderB;
-        });
-
-        grid.innerHTML = filteredList.map(anime => this.renderCard(anime)).join('');
-    },
+    }
 };
 
-// 页面加载完成后初始化
+// 初始化
 document.addEventListener('DOMContentLoaded', () => {
-    AnimeList.init();
+    App.init();
+
+    // 弹窗点击事件（事件委托）
+    document.getElementById('anime-grid').addEventListener('click', (e) => {
+        const card = e.target.closest('.anime-card');
+        if (card) {
+            App.openModal(parseInt(card.dataset.index));
+        }
+    });
 });
