@@ -1,90 +1,109 @@
 # Bangumi 追番列表
 
-一个自动同步 Bangumi 追番数据的静态网站，部署在 GitHub Pages 上。
+一个自动同步 Bangumi 追番数据的网站，部署在 GitHub Pages 上
 
 ## 功能
 
-- 每天自动从 Bangumi 爬取追番数据
-- 按状态筛选：在看、看过、想看、搁置
-- 支持搜索番剧
-- 显示番剧标签、简介、进度、开播时间等信息
-- 响应式设计，支持移动端
+- 每天自动从 Bangumi API 爬取追番数据
+- 番剧列表按状态筛选（全部/在看/看过/想看/搁置），显示数量统计
+- 点击番剧弹出详情弹窗，显示封面、名称、评分、集数、标签、简介
+- 支持番剧搜索
+- 番剧封面可选显示/隐藏
+- 支持自定义背景图、头像、网站图标
+- 支持 Bangumi 镜像站和图片镜像源
+- 毛玻璃风格 UI，圆角卡片，非线性动画
+- 响应式设计，移动端自适应
 
 ## 项目结构
 
 ```
 Bangumi_AniList/
 ├── .github/workflows/
-│   └── update-bangumi.yml      # GitHub Actions 工作流，每天自动爬取数据
+│   ├── update-bangumi.yml      # 定时爬取数据的工作流
+│   └── static.yml              # 部署到 GitHub Pages 的工作流
 ├── scripts/
 │   ├── fetch_bangumi.py        # Python 爬虫脚本
 │   └── requirements.txt        # Python 依赖
 ├── static/
-│   ├── style.css               # 页面样式，响应式设计
-│   └── script.js               # 前端逻辑，加载数据并渲染番剧列表
+│   ├── style.css               # 页面样式
+│   └── script.js               # 前端逻辑
 ├── index.html                  # 主页面
-├── bangumi.json                # 爬取的追番数据（自动生成）
-├── config.json                 # 配置文件（用户ID、昵称）
-├── README.md                   # 项目说明
-└── .gitignore                  # Git 忽略文件
+├── config.json                 # 网站配置
+├── bangumi.json                # 爬取的追番数据
+└── README.md                   # 项目说明
 ```
 
-### 文件说明
+## 配置说明
 
-| 文件 | 说明 |
-|------|------|
-| `config.json` | 配置文件，包含 Bangumi 用户 ID 和显示昵称 |
-| `bangumi.json` | 爬取的追番数据，由 GitHub Actions 每天自动更新 |
-| `index.html` | 网站主页面 |
-| `static/style.css` | 页面样式，响应式设计 |
-| `static/script.js` | 前端逻辑，加载数据并渲染番剧列表 |
-| `scripts/fetch_bangumi.py` | Python 爬虫，从 Bangumi API 获取追番数据 |
-| `update-bangumi.yml` | GitHub Actions 工作流，自动化爬取和部署 |
+编辑 `config.json` 文件
 
-## 部署
+### 配置项说明
 
-1. Fork 本仓库
-2. 进入仓库 Settings → Pages
-3. Source 选择 "GitHub Actions"
-4. 等待 Action 运行完成即可访问
+| 配置项 | 类型 | 必填 | 说明 |
+|--------|------|------|------|
+| `username` | string | 是 | Bangumi 用户名（用于查询数据） |
+| `nickname` | string | 是 | 网站显示的昵称 |
+| `avatar` | string | 否 | 用户头像 URL，为空则不显示头像 |
+| `background` | string | 否 | 桌面端背景图 URL |
+| `background_mobile` | string | 否 | 移动端背景图 URL |
+| `favicon` | string | 否 | 网站图标 URL |
+| `bangumi_mirror` | string | 否 | Bangumi 镜像站地址，为空则使用 `https://bgm.tv/` |
+| `bangumi_image_mirror` | string | 否 | 图片镜像源地址，为空则使用原始地址 `https://lain.bgm.tv/` |
+| `show_cover` | boolean | 否 | 是否显示番剧封面图，默认 `true` |
+
+## 云端部署
+
+1. Fork 本仓库到你的 GitHub
+2. 修改 config.json 配置文件
+3. 进入仓库 → Settings → Pages，Source 选择 GitHub Actions
+4. 先手动爬取一次数据 Actions → Update Bangumi Data → Run workflow
+5. 等待 Action 运行完成（首次约 1-2 分钟）
+6. 访问 `https://<你的用户名>.github.io/Bangumi_AniList/`
+
+### 修改自动爬取时间
+
+编辑 `.github/workflows/update-bangumi.yml` 中的 cron 表达式：
+
+```yaml
+on:
+  schedule:
+    - cron: '0 20 * * *'  # UTC 时间
+```
+
+cron 格式为 `分 时 日 月 周`，**使用 UTC 时间**。
+
+**常用时间对照（UTC = 北京时间 - 8 小时）：**
+
+| 北京时间 | UTC 时间 | cron 表达式 |
+|----------|----------|-------------|
+| 00:00 | 16:00 (前一日) | `0 16 * * *` |
+| 04:00 | 20:00 (前一日) | `0 20 * * *` |
+| 08:00 | 00:00 | `0 0 * * *` |
+| 12:00 | 04:00 | `0 4 * * *` |
+| 18:00 | 10:00 | `0 10 * * *` |
+| 23:00 | 15:00 | `0 15 * * *` |
+
+修改后提交即可生效。也可以在 Actions 页面手动点击 **Run workflow** 立即触发。
 
 ## 本地运行
+
+下载源码、修改 config.json 配置文件，安装 Python 然后运行：
 
 ```bash
 # 安装依赖
 pip install -r scripts/requirements.txt
 
-# 运行爬虫
+# 运行爬虫获取数据
 python scripts/fetch_bangumi.py
 
 # 启动本地服务器
 python -m http.server 8000
 ```
 
-然后访问 http://localhost:8000
-
-## 自定义
-
-修改项目根目录下的 `config.json` 文件：
-
-### 配置项说明
-
-| 配置项 | 类型 | 默认值 | 说明 |
-|--------|------|--------|------|
-| `user_id` | number | 必填 | Bangumi 用户 ID（数字） |
-| `nickname` | string | 用户ID | 网站上显示的昵称 |
-| `show_cover` | boolean | false | 是否显示番剧封面图 |
-| `show_name_cn` | boolean | true | 是否优先显示中文名（false则显示日文名） |
-| `show_type` | boolean | true | 是否显示番剧类型（TV/剧场版等） |
-| `show_status` | boolean | true | 是否显示追番状态（在看/看过/想看等） |
-| `show_progress` | boolean | true | 是否显示观看进度和进度条 |
-| `show_air_date` | boolean | true | 是否显示开播时间 |
-| `show_summary` | boolean | true | 是否显示番剧简介 |
-| `show_score` | boolean | true | 是否显示评分 |
-| `show_tags` | boolean | true | 是否显示番剧标签 |
+访问 http://localhost:8000
 
 ## 技术栈
 
-- **爬虫**: Python + requests
+- **爬虫**: Python + requests（调用 Bangumi API v0）
 - **前端**: 纯 HTML/CSS/JS
 - **部署**: GitHub Actions + GitHub Pages
