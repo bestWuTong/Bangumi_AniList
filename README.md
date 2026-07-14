@@ -44,12 +44,13 @@ Bangumi_AniList/
 | `username` | string | 是 | Bangumi 用户名（用于查询数据） |
 | `nickname` | string | 是 | 网站显示的昵称 |
 | `avatar` | string | 否 | 用户头像 URL，为空则不显示头像 |
-| `background` | string | 否 | 桌面端背景图 URL |
-| `background_mobile` | string | 否 | 移动端背景图 URL |
+| `website` | string | 否 | 用户个人网站 URL，为空则不能点击头像跳转网页 |
+| `background` | string | 否 | 桌面端（横屏）背景图 URL |
+| `background_mobile` | string | 否 | 移动端（竖屏）背景图 URL |
 | `favicon` | string | 否 | 网站图标 URL |
 | `bangumi_mirror` | string | 否 | Bangumi 镜像站地址，为空则使用 `https://bgm.tv/` |
-| `bangumi_image_mirror` | string | 否 | 图片镜像源地址，为空则使用原始地址 `https://lain.bgm.tv/` |
-| `show_cover` | boolean | 否 | 是否显示番剧封面图，默认 `true` |
+| `bangumi_image_mirror` | string | 否 | 图片镜像站地址，为空则使用 `https://lain.bgm.tv/` |
+| `show_cover` | boolean | 否 | 是否显示番剧封面图，默认 `true` （当番剧封面加载缓慢时可关闭该选项以改善用户体验）|
 
 ## 云端部署
 

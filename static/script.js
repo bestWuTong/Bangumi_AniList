@@ -67,11 +67,19 @@ const App = {
 
         // 头像
         const avatarEl = document.getElementById('avatar');
+        const avatarLink = document.getElementById('avatar-link');
         if (this.config.avatar) {
             avatarEl.src = this.config.avatar;
-            avatarEl.style.display = 'block';
+            avatarLink.style.display = 'block';
         } else {
-            avatarEl.style.display = 'none';
+            avatarLink.style.display = 'none';
+        }
+        if (this.config.website) {
+            avatarLink.href = this.config.website;
+            avatarLink.style.cursor = 'pointer';
+        } else {
+            avatarLink.style.pointerEvents = 'none';
+            avatarLink.style.cursor = 'default';
         }
 
         // Bangumi 按钮
