@@ -22,6 +22,7 @@
                 <a class="avatar-link" id="avatar-link" href="#" target="_blank">
                     <img class="avatar" id="avatar" src="" alt="avatar">
                 </a>
+                <button class="wordcloud-btn" id="wordcloud-btn">查看词云</button>
                 <a class="bangumi-btn" id="bangumi-btn" href="https://bgm.tv/user/wutong" target="_blank">前往 Bangumi</a>
             </div>
         </div>
@@ -96,6 +97,17 @@
                     <span class="modal-label">简介</span>
                     <p class="modal-summary" id="modal-summary"></p>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 词云弹窗 -->
+    <div class="modal-overlay" id="wc-overlay">
+        <div class="modal glass-modal wc-modal">
+            <button class="modal-close" id="wc-close">&times;</button>
+            <div class="modal-body wc-body">
+                <h2 class="wc-title">番剧标签词云</h2>
+                <div class="wc-container" id="wc-container"></div>
             </div>
         </div>
     </div>

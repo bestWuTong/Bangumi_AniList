@@ -139,6 +139,13 @@ const App = {
             if (e.target === e.currentTarget) this.closeModal();
         });
 
+        // 词云
+        document.getElementById('wordcloud-btn').addEventListener('click', () => this.openWordCloud());
+        document.getElementById('wc-close').addEventListener('click', () => this.closeWordCloud());
+        document.getElementById('wc-overlay').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) this.closeWordCloud();
+        });
+
         // 返回顶部
         const backBtn = document.getElementById('back-to-top');
         window.addEventListener('scroll', () => {
@@ -154,7 +161,13 @@ const App = {
 
         // ESC 关闭弹窗
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') this.closeModal();
+            if (e.key === 'Escape') {
+                if (document.getElementById('wc-overlay').classList.contains('active')) {
+                    this.closeWordCloud();
+                } else {
+                    this.closeModal();
+                }
+            }
         });
 
         // 窗口大小变化更新背景
@@ -309,6 +322,178 @@ const App = {
         const div = document.createElement('div');
         div.textContent = str;
         return div.innerHTML;
+    },
+
+    // ========== 词云 ==========
+    wcData: null,
+
+    EXCLUDED_TAGS: ['TV', 'OVA', 'Movie', 'WEB', '剧场版', '总集篇', '日本'],
+    WC_COLORS: [
+        '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4',
+        '#FFEAA7', '#DDA0DD', '#FF8A65', '#81D4FA',
+        '#A5D6A7', '#FFD54F', '#CE93D8', '#80DEEA',
+        '#EF5350', '#42A5F5', '#66BB6A', '#FFA726'
+    ],
+
+    _isExcludedTag(name) {
+        if (!name) return true;
+        if (this.EXCLUDED_TAGS.includes(name)) return true;
+        if (/^\d{4}$/.test(name)) return true;
+        if (/\d+年|\d+月/.test(name)) return true;
+        return false;
+    },
+
+    _getTagStats() {
+        const data = this.data || this.wcData;
+        if (!data) return [];
+        const map = {};
+        (data.collections || []).forEach(c => {
+            (c.subject?.tags || []).forEach(t => {
+                const name = t.name;
+                if (name && !this._isExcludedTag(name)) {
+                    map[name] = (map[name] || 0) + 1;
+                }
+            });
+        });
+        return Object.entries(map)
+            .map(([text, count]) => ({ text, count }))
+            .sort((a, b) => b.count - a.count);
+    },
+
+    async openWordCloud() {
+        if (!this.data && !this.wcData) {
+            try {
+                const resp = await fetch('bangumi.json');
+                if (resp.ok) this.wcData = await resp.json();
+            } catch (e) {
+                console.error('词云数据加载失败:', e);
+            }
+        }
+        const stats = this._getTagStats();
+        if (stats.length === 0) return;
+
+        const maxCount = stats[0].count;
+        const minCount = stats[stats.length - 1].count;
+        const logMax = Math.log(maxCount + 1);
+        const logMin = Math.log(Math.max(minCount, 1) + 1);
+        const logRange = logMax - logMin || 1;
+
+        const container = document.getElementById('wc-container');
+        container.innerHTML = '';
+
+        const cw = container.offsetWidth;
+        const ch = container.offsetHeight;
+        const placed = [];
+        const cx = cw / 2;
+        const cy = ch / 2;
+
+        const maxWords = stats.length;
+
+        for (let i = 0; i < maxWords; i++) {
+            const { text, count } = stats[i];
+            const logVal = Math.log(count + 1);
+            const norm = (logVal - logMin) / logRange;
+            const fontSize = Math.round(6 + norm * 25);
+
+            const word = document.createElement('span');
+            word.className = 'wc-word';
+            word.textContent = text;
+            word.style.fontSize = fontSize + 'px';
+            word.style.color = this.WC_COLORS[i % this.WC_COLORS.length];
+            word.style.opacity = 0.6 + norm * 0.4;
+            container.appendChild(word);
+
+            const isVertical = Math.random() < 0.25;
+            if (isVertical) {
+                word.style.writingMode = 'vertical-rl';
+                word.style.textOrientation = 'mixed';
+            }
+
+            const placedRect = this._placeWord(word, cx, cy, cw, ch, placed, isVertical);
+            if (placedRect) {
+                placed.push(placedRect);
+                word.addEventListener('mouseenter', (e) => this._showWCTooltip(e, text, count));
+                word.addEventListener('mousemove', (e) => this._moveWCTooltip(e));
+                word.addEventListener('mouseleave', () => this._hideWCTooltip());
+            } else {
+                container.removeChild(word);
+            }
+        }
+
+        document.getElementById('wc-overlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    },
+
+    _placeWord(el, cx, cy, cw, ch, placed, isVertical) {
+        const textW = el.offsetWidth;
+        const textH = el.offsetHeight;
+        const halfW = textW / 2;
+        const halfH = textH / 2;
+
+        let angle = Math.random() * Math.PI * 2;
+        const step = 0.4;
+        const maxSteps = 20000;
+
+        for (let s = 0; s < maxSteps; s++) {
+            const r = 1.5 + s * step;
+            const x = cx + r * Math.cos(angle);
+            const y = cy + r * Math.sin(angle);
+            angle += step / Math.max(r, 1);
+
+            if (x - halfW < 0 || x + halfW > cw ||
+                y - halfH < 0 || y + halfH > ch) continue;
+
+            let overlap = false;
+            const pad = 4;
+            for (const p of placed) {
+                if (x - halfW - pad < p.x + p.halfW &&
+                    x + halfW + pad > p.x - p.halfW &&
+                    y - halfH - pad < p.y + p.halfH &&
+                    y + halfH + pad > p.y - p.halfH) {
+                    overlap = true;
+                    break;
+                }
+            }
+
+            if (!overlap) {
+                el.style.left = (x - halfW) + 'px';
+                el.style.top = (y - halfH) + 'px';
+                return { x, y, halfW, halfH };
+            }
+        }
+        return null;
+    },
+
+    _showWCTooltip(e, text, count) {
+        let tip = document.querySelector('.wc-tooltip');
+        if (!tip) {
+            tip = document.createElement('div');
+            tip.className = 'wc-tooltip';
+            document.body.appendChild(tip);
+        }
+        tip.textContent = `${text}: ${count} 次`;
+        tip.classList.add('visible');
+        this._moveWCTooltip(e);
+    },
+
+    _moveWCTooltip(e) {
+        const tip = document.querySelector('.wc-tooltip');
+        if (!tip) return;
+        const x = e.clientX + 14;
+        const y = e.clientY - 30;
+        tip.style.left = x + 'px';
+        tip.style.top = y + 'px';
+    },
+
+    _hideWCTooltip() {
+        const tip = document.querySelector('.wc-tooltip');
+        if (tip) tip.classList.remove('visible');
+    },
+
+    closeWordCloud() {
+        document.getElementById('wc-overlay').classList.remove('active');
+        document.body.style.overflow = '';
+        this._hideWCTooltip();
     }
 };
 

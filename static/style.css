@@ -626,6 +626,96 @@ body {
     }
 }
 
+/* 词云按钮 */
+.wordcloud-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.15s var(--transition);
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.wordcloud-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+}
+
+/* 词云弹窗 */
+.wc-modal {
+    max-width: 900px;
+    width: 92%;
+}
+
+.wc-body {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 28px;
+    height: 85vh;
+}
+
+.wc-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.wc-container {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+}
+
+.wc-word {
+    position: absolute;
+    white-space: nowrap;
+    cursor: default;
+    transition: opacity 0.15s;
+    user-select: none;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.wc-word:hover {
+    opacity: 0.75 !important;
+}
+
+.wc-tooltip {
+    position: fixed;
+    padding: 6px 12px;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    pointer-events: none;
+    z-index: 9999;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.15s;
+    backdrop-filter: blur(4px);
+}
+
+.wc-tooltip.visible {
+    opacity: 1;
+}
+
+@media (max-width: 640px) {
+    .wc-body {
+        padding: 24px 16px;
+    }
+    .wc-modal {
+        width: 95%;
+    }
+}
+
 /* 返回顶部 */
 .back-to-top {
     position: fixed;
