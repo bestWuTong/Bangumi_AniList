@@ -1,6 +1,10 @@
 # Bangumi 追番列表
 
-一个自动同步 Bangumi 追番数据的网站，部署在 GitHub Pages 上
+一个能自动同步 Bangumi 个人追番数据的网站，部署在 GitHub Pages 上
+
+## 查看示例
+[https://ani.bestwutong.top/](https://ani.bestwutong.top/)
+
 
 ## 功能
 
@@ -37,8 +41,6 @@ Bangumi_AniList/
 
 编辑 `config.json` 文件
 
-### 配置项说明
-
 | 配置项 | 类型 | 必填 | 说明 |
 |--------|------|------|------|
 | `username` | string | 是 | Bangumi 用户名（用于查询数据） |
@@ -49,8 +51,12 @@ Bangumi_AniList/
 | `background_mobile` | string | 否 | 移动端（竖屏）背景图 URL |
 | `favicon` | string | 否 | 网站图标 URL |
 | `bangumi_mirror` | string | 否 | Bangumi 镜像站地址，为空则使用 `https://bgm.tv/` |
-| `bangumi_image_mirror` | string | 否 | 图片镜像站地址，为空则使用 `https://lain.bgm.tv/` |
+| `bangumi_image_mirror` | string | 否 | 番剧封面镜像站地址，为空则使用 `https://lain.bgm.tv/` |
 | `show_cover` | boolean | 否 | 是否显示番剧封面图，默认 `true` （当番剧封面加载缓慢时可关闭该选项以改善用户体验）|
+
+注意： `string` 类型的参数为空值时这样表示： `""`
+
+如何获取 `username` ？ 登录 [https://bgm.tv/](https://bgm.tv/) -> 查看个人主页 -> 复制浏览器地址栏中最后一个字段，如 [https://bgm.tv/user/wutong](https://bgm.tv/user/wutong) 中的 `wutong`
 
 ## 云端部署
 
