@@ -3,10 +3,10 @@
   "nickname": "無同",
   "avatar": "https://www.bestwutong.top/images/avatar.webp",
   "website": "https://www.bestwutong.top",
-  "background": "https://s21.ax1x.com/2025/08/25/pVyQxQP.webp",
-  "background_mobile": "https://s21.ax1x.com/2025/08/25/pVyQxQP.webp",
-  "favicon": "https://www.bestwutong.top/images/icon/favicon.png",
-  "bangumi_mirror": "https://bgmmi.anibt.net/",
+  "background": "static/img/background.webp",
+  "background_mobile": "static/img/background.webp",
+  "favicon": "static/img/favicon.ico",
+  "bangumi_mirror": "",
   "bangumi_image_mirror": "https://bgmimg.anibt.net/",
   "show_cover": true
 }
