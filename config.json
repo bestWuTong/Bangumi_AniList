@@ -1,12 +1,18 @@
 {
-  "username": "wutong",
-  "nickname": "無同",
-  "avatar": "https://www.bestwutong.top/images/avatar.webp",
-  "website": "https://www.bestwutong.top",
-  "background": "static/img/background.webp",
-  "background_mobile": "static/img/background.webp",
-  "favicon": "static/img/favicon.ico",
-  "bangumi_mirror": "",
-  "bangumi_image_mirror": "https://bgmimg.anibt.net/",
-  "show_cover": true
+  "scripts": {
+    "username": "wutong",
+    "fetch_covers": true
+  },
+  "anilist": {
+    "nickname": "無同",
+    "avatar": "https://www.bestwutong.top/images/avatar.webp",
+    "website": "https://www.bestwutong.top",
+    "background": "static/img/background.webp",
+    "background_mobile": "static/img/background.webp",
+    "favicon": "static/img/favicon.ico",
+    "bangumi_mirror": "",
+    "bangumi_image_mirror": "https://bgmimg.anibt.net/",
+    "show_covers": true,
+    "use_fetched_covers": true
+  }
 }

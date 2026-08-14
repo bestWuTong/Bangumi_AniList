@@ -39,23 +39,25 @@ const App = {
     // 背景设置
     setupBackground() {
         if (!this.config) return;
+        const a = this.config.anilist || {};
         const overlay = document.querySelector('.bg-overlay');
         const isMobile = window.innerWidth <= 768;
-        const bgUrl = isMobile ? this.config.background_mobile : this.config.background;
+        const bgUrl = isMobile ? a.background_mobile : a.background;
         if (bgUrl) {
             overlay.style.backgroundImage = `url(${bgUrl})`;
         }
 
         // Favicon
-        if (this.config.favicon) {
-            document.getElementById('favicon').href = this.config.favicon;
+        if (a.favicon) {
+            document.getElementById('favicon').href = a.favicon;
         }
     },
 
     // 头部设置
     setupHeader() {
         if (!this.config || !this.data) return;
-        const nickname = this.config.nickname || this.data.username || '';
+        const a = this.config.anilist || {};
+        const nickname = a.nickname || this.data.username || '';
         document.getElementById('nickname').textContent = nickname;
         document.title = `${nickname}的追番列表`;
 
@@ -68,14 +70,14 @@ const App = {
         // 头像
         const avatarEl = document.getElementById('avatar');
         const avatarLink = document.getElementById('avatar-link');
-        if (this.config.avatar) {
-            avatarEl.src = this.config.avatar;
+        if (a.avatar) {
+            avatarEl.src = a.avatar;
             avatarLink.style.display = 'block';
         } else {
             avatarLink.style.display = 'none';
         }
-        if (this.config.website) {
-            avatarLink.href = this.config.website;
+        if (a.website) {
+            avatarLink.href = a.website;
             avatarLink.style.cursor = 'pointer';
         } else {
             avatarLink.style.pointerEvents = 'none';
@@ -83,7 +85,7 @@ const App = {
         }
 
         // Bangumi 按钮
-        const baseUrl = this.config.bangumi_mirror || 'https://bgm.tv/';
+        const baseUrl = a.bangumi_mirror || 'https://bgm.tv/';
         const bangumiBtn = document.getElementById('bangumi-btn');
         bangumiBtn.href = `${baseUrl}user/${this.data.username}`;
     },
@@ -204,15 +206,28 @@ const App = {
     // 图片 URL 处理
     getImageUrl(url) {
         if (!url) return '';
-        if (this.config && this.config.bangumi_image_mirror) {
-            return url.replace('https://lain.bgm.tv/', this.config.bangumi_image_mirror);
+        const a = (this.config && this.config.anilist) || {};
+        if (a.use_fetched_covers) {
+            const name = url.split('/').pop();
+            if (name) return `static/covers/${name}`;
+        }
+        return this.getMirrorUrl(url);
+    },
+
+    // 镜像 URL（本地封面加载失败时的兜底）
+    getMirrorUrl(url) {
+        if (!url) return '';
+        const a = (this.config && this.config.anilist) || {};
+        if (a.bangumi_image_mirror) {
+            return url.replace('https://lain.bgm.tv/', a.bangumi_image_mirror);
         }
         return url;
     },
 
     // 获取 Bangumi 链接
     getBangumiUrl(type, id) {
-        const baseUrl = (this.config && this.config.bangumi_mirror) || 'https://bgm.tv/';
+        const a = (this.config && this.config.anilist) || {};
+        const baseUrl = a.bangumi_mirror || 'https://bgm.tv/';
         return `${baseUrl}${type}/${id}`;
     },
 
@@ -233,11 +248,12 @@ const App = {
         const subject = collection.subject || {};
         const nameCn = subject.name_cn || subject.name || '未知';
         const coverUrl = this.getImageUrl(subject.images?.common);
-        const showCover = this.config?.show_cover !== false;
+        const mirrorUrl = this.getMirrorUrl(subject.images?.common);
+        const showCovers = this.config?.anilist?.show_covers !== false;
 
-        const coverHtml = showCover
+        const coverHtml = showCovers
             ? (coverUrl
-                ? `<div class="anime-cover-wrapper"><img class="anime-cover" src="${coverUrl}" alt="${this.esc(nameCn)}" loading="lazy"></div>`
+                ? `<div class="anime-cover-wrapper"><img class="anime-cover" src="${coverUrl}" alt="${this.esc(nameCn)}" loading="lazy" onerror="this.onerror=null;this.src='${this.esc(mirrorUrl)}'"></div>`
                 : `<div class="anime-cover-wrapper"><div class="anime-cover-placeholder">♪</div></div>`)
             : '';
 
@@ -268,15 +284,20 @@ const App = {
 
         const subject = collection.subject || {};
         const nameCn = subject.name_cn || subject.name || '未知';
-        const showCover = this.config?.show_cover !== false;
+        const showCovers = this.config?.anilist?.show_covers !== false;
         const coverUrl = this.getImageUrl(subject.images?.common);
+        const mirrorUrl = this.getMirrorUrl(subject.images?.common);
 
         // 封面
         const coverWrap = document.querySelector('.modal-cover-wrap');
         const coverEl = document.getElementById('modal-cover');
-        if (showCover && coverUrl) {
+        if (showCovers && coverUrl) {
             coverWrap.style.display = '';
             coverEl.src = coverUrl;
+            coverEl.onerror = () => {
+                coverEl.onerror = null;
+                if (mirrorUrl) coverEl.src = mirrorUrl;
+            };
         } else {
             coverWrap.style.display = 'none';
         }
@@ -305,7 +326,7 @@ const App = {
 
         // 简介
         const summary = subject.short_summary || subject.summary || '暂无简介';
-        document.getElementById('modal-summary').textContent = summary;
+        document.getElementById('modal-summary').textContent = summary === '暂无简介' ? summary : summary + '……';
 
         // 显示弹窗
         document.getElementById('modal-overlay').classList.add('active');

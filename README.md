@@ -29,6 +29,7 @@ Bangumi_AniList/
 │   ├── fetch_bangumi.py        # Python 爬虫脚本
 │   └── requirements.txt        # Python 依赖
 ├── static/
+│   ├── covers/                 # 爬取的番剧封面（可选）
 │   ├── style.css               # 页面样式
 │   └── script.js               # 前端逻辑
 ├── index.html                  # 主页面
@@ -41,18 +42,48 @@ Bangumi_AniList/
 
 编辑 `config.json` 文件
 
+```json
+{
+  "scripts": {
+    "username": "wutong",
+    "fetch_covers": true
+  },
+  "anilist": {
+    "nickname": "無同",
+    "avatar": "",
+    "website": "",
+    "background": "",
+    "background_mobile": "",
+    "favicon": "",
+    "bangumi_mirror": "",
+    "bangumi_image_mirror": "",
+    "show_covers": true,
+    "use_fetched_covers": false
+  }
+}
+```
+
+### `scripts` 段
+
 | 配置项 | 类型 | 必填 | 说明 |
 |--------|------|------|------|
 | `username` | string | 是 | Bangumi 用户名（用于查询数据） |
+| `fetch_covers` | boolean | 否 | 是否将番剧封面下载到仓库 `static/covers/`，默认 `false` |
+
+### `anilist` 段
+
+| 配置项 | 类型 | 必填 | 说明 |
+|--------|------|------|------|
 | `nickname` | string | 是 | 网站显示的昵称 |
 | `avatar` | string | 否 | 用户头像 URL，为空则不显示头像 |
 | `website` | string | 否 | 用户个人网站 URL，为空则不能点击头像跳转网页 |
 | `background` | string | 否 | 桌面端（横屏）背景图 URL |
 | `background_mobile` | string | 否 | 移动端（竖屏）背景图 URL |
 | `favicon` | string | 否 | 网站图标 URL |
-| `bangumi_mirror` | string | 否 | Bangumi 镜像站地址，为空则使用 `https://bgm.tv/` |
-| `bangumi_image_mirror` | string | 否 | 番剧封面镜像站地址，为空则使用 `https://lain.bgm.tv/` |
-| `show_cover` | boolean | 否 | 是否显示番剧封面图，默认 `true` （当番剧封面加载缓慢时可关闭该选项以改善用户体验）|
+| `bangumi_mirror` | string | 否 | Bangumi 网站镜像地址，用于跳转个人主页和番剧详情页，为空则使用 `https://bgm.tv/` |
+| `bangumi_image_mirror` | string | 否 | 番剧封面图片镜像地址，为空则使用原地址 `https://lain.bgm.tv/` 显示封面（仅用于显示，不用于爬取） |
+| `show_covers` | boolean | 否 | 是否显示番剧封面图，默认 `true`（当封面加载缓慢时可关闭该选项以改善用户体验） |
+| `use_fetched_covers` | boolean | 否 | 是否使用仓库中已爬取的封面，默认 `false`。`true` 时优先显示 `static/covers/` 里的本地封面（加载失败会回退到镜像/原地址），`false` 时使用 `bangumi_image_mirror` 地址显示 |
 
 注意： `string` 类型的参数为空值时这样表示： `""`
 

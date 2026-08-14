@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Bangumi 追番数据爬取脚本 - 保存完整原始数据"""
+"""Bangumi 追番数据爬取脚本 - 保存完整原始数据（可选下载封面）"""
 
 import json
 import os
 import sys
 import time
 from datetime import datetime, timezone
+from urllib.parse import unquote, urlparse
 
 import requests
 from requests.adapters import HTTPAdapter
@@ -22,15 +23,21 @@ config_path = os.path.join(project_root, "config.json")
 if os.path.exists(config_path):
     with open(config_path, "r", encoding="utf-8") as f:
         config = json.load(f)
-    USERNAME = config.get("username", "")
-    NICKNAME = config.get("nickname", "")
+    scripts_cfg = config.get("scripts", {})
+    anilist_cfg = config.get("anilist", {})
+    USERNAME = scripts_cfg.get("username", "")
+    NICKNAME = anilist_cfg.get("nickname", "")
+    FETCH_COVERS = scripts_cfg.get("fetch_covers", False)
 else:
     print("错误: 未找到 config.json 文件")
     sys.exit(1)
 
 if not USERNAME:
-    print("错误: config.json 中未配置 username")
+    print("错误: config.json 中 scripts.username 未配置")
     sys.exit(1)
+
+COVERS_DIR = os.path.join(project_root, "static", "covers")
+os.makedirs(COVERS_DIR, exist_ok=True)
 
 USER_AGENT = "wutong/bangumi-anilist/1.0 (https://github.com/wutong/Bangumi_AniList)"
 
@@ -92,6 +99,57 @@ def fetch_collections(session):
     return all_collections
 
 
+def get_image_basename(url):
+    """从图片 URL 中提取文件名（如 622288_R72Y5.jpg），不存在的 URL 返回 None"""
+    if not url:
+        return None
+    try:
+        path = urlparse(url).path
+        name = unquote(os.path.basename(path))
+        return name if name else None
+    except Exception:
+        return None
+
+
+def download_cover(session, url, dest):
+    """下载封面到本地，已存在则跳过。成功返回 True"""
+    if os.path.exists(dest):
+        return True
+    try:
+        resp = session.get(url, headers=get_headers(), timeout=60)
+        resp.raise_for_status()
+        with open(dest, "wb") as f:
+            f.write(resp.content)
+        print(f"  封面已下载: {os.path.basename(dest)}")
+        return True
+    except Exception as e:
+        print(f"  封面下载失败: {url} ({e})")
+        return False
+
+
+def fetch_covers(session, collections):
+    """下载所有收藏的封面到 static/covers/，并清理不再引用的旧文件"""
+    referenced = set()
+    for c in collections:
+        subject = c.get("subject", {})
+        url = subject.get("images", {}).get("common")
+        basename = get_image_basename(url)
+        if not basename:
+            continue
+        referenced.add(basename)
+        download_cover(session, url, os.path.join(COVERS_DIR, basename))
+
+    # 清理旧封面：删除不在当前收藏中的文件（封面更新后旧哈希文件也随之移除）
+    for name in os.listdir(COVERS_DIR):
+        if name not in referenced:
+            old_path = os.path.join(COVERS_DIR, name)
+            try:
+                os.remove(old_path)
+                print(f"清理旧封面: {name}")
+            except Exception as e:
+                print(f"清理失败: {name} ({e})")
+
+
 def main():
     print("=" * 50)
     print("Bangumi 追番数据爬取")
@@ -106,6 +164,10 @@ def main():
         sys.exit(1)
 
     print(f"\n共获取 {len(collections)} 条收藏")
+
+    if FETCH_COVERS:
+        print("\n正在下载封面...")
+        fetch_covers(session, collections)
 
     output = {
         "last_updated": datetime.now(timezone.utc).isoformat(),
