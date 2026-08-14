@@ -68,7 +68,7 @@ Bangumi_AniList/
 | 配置项 | 类型 | 必填 | 说明 |
 |--------|------|------|------|
 | `username` | string | 是 | Bangumi 用户名（用于查询数据） |
-| `fetch_covers` | boolean | 否 | 是否将番剧封面下载到仓库 `static/covers/`，默认 `false` |
+| `fetch_covers` | boolean | 否 | 是否将番剧封面下载到仓库 `static/covers/` |
 
 ### `anilist` 段
 
@@ -83,7 +83,7 @@ Bangumi_AniList/
 | `bangumi_mirror` | string | 否 | Bangumi 网站镜像地址，用于跳转个人主页和番剧详情页，为空则使用 `https://bgm.tv/` |
 | `bangumi_image_mirror` | string | 否 | 番剧封面图片镜像地址，为空则使用原地址 `https://lain.bgm.tv/` 显示封面（仅用于显示，不用于爬取） |
 | `show_covers` | boolean | 否 | 是否显示番剧封面图，默认 `true`（当封面加载缓慢时可关闭该选项以改善用户体验） |
-| `use_fetched_covers` | boolean | 否 | 是否使用仓库中已爬取的封面，默认 `false`。`true` 时优先显示 `static/covers/` 里的本地封面（加载失败会回退到镜像/原地址），`false` 时使用 `bangumi_image_mirror` 地址显示 |
+| `use_fetched_covers` | boolean | 否 | 是否使用仓库中已爬取的封面。`true` 时优先显示 `static/covers/` 里的本地封面（加载失败会回退到镜像/原地址），`false` 时使用 `bangumi_image_mirror` 地址显示 |
 
 注意： `string` 类型的参数为空值时这样表示： `""`
 

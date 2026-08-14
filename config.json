@@ -13,6 +13,6 @@
     "bangumi_mirror": "",
     "bangumi_image_mirror": "https://bgmimg.anibt.net/",
     "show_covers": true,
-    "use_fetched_covers": true
+    "use_fetched_covers": false
   }
 }
