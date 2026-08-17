@@ -57,7 +57,7 @@ const App = {
     setupHeader() {
         if (!this.config || !this.data) return;
         const a = this.config.anilist || {};
-        const nickname = a.nickname || this.data.username || '';
+        const nickname = a.nickname || '';
         document.getElementById('nickname').textContent = nickname;
         document.title = `${nickname}的追番列表`;
 

@@ -24,9 +24,7 @@ if os.path.exists(config_path):
     with open(config_path, "r", encoding="utf-8") as f:
         config = json.load(f)
     scripts_cfg = config.get("scripts", {})
-    anilist_cfg = config.get("anilist", {})
     USERNAME = scripts_cfg.get("username", "")
-    NICKNAME = anilist_cfg.get("nickname", "")
     FETCH_COVERS = scripts_cfg.get("fetch_covers", False)
 else:
     print("错误: 未找到 config.json 文件")
@@ -39,7 +37,13 @@ if not USERNAME:
 COVERS_DIR = os.path.join(project_root, "static", "covers")
 os.makedirs(COVERS_DIR, exist_ok=True)
 
-USER_AGENT = "wutong/bangumi-anilist/1.0 (https://github.com/wutong/Bangumi_AniList)"
+def get_user_agent():
+    """生成 User-Agent：<用户名>-bangumi-anilist/1.0 (<用户名>)"""
+    name = USERNAME or "user"
+    return f"{name}-bangumi-anilist/1.0 ({name})"
+
+
+USER_AGENT = get_user_agent()
 
 
 def create_session():
@@ -154,7 +158,7 @@ def main():
     print("=" * 50)
     print("Bangumi 追番数据爬取")
     print("=" * 50)
-    print(f"用户: {USERNAME} ({NICKNAME})")
+    print(f"用户: {USERNAME}")
 
     session = create_session()
 
@@ -172,7 +176,6 @@ def main():
     output = {
         "last_updated": datetime.now(timezone.utc).isoformat(),
         "username": USERNAME,
-        "nickname": NICKNAME,
         "total": len(collections),
         "collections": collections,
     }
