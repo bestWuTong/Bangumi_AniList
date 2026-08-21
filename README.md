@@ -58,7 +58,7 @@ Bangumi_AniList/
     "bangumi_mirror": "",
     "bangumi_image_mirror": "",
     "show_covers": true,
-    "use_fetched_covers": false
+    "use_fetched_covers": true
   }
 }
 ```
