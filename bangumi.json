@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-15T11:19:53.626543+00:00",
+  "last_updated": "2026-09-15T11:32:10.221859+00:00",
   "username": "wutong",
   "total": 240,
   "collections": [
@@ -206,7 +206,7 @@
           {
             "name": "奇幻",
             "count": 1152,
-            "total_count": 476465
+            "total_count": 476469
           },
           {
             "name": "StudioBind",
@@ -216,7 +216,7 @@
           {
             "name": "TV",
             "count": 995,
-            "total_count": 1414281
+            "total_count": 1414282
           },
           {
             "name": "无职转生",
@@ -244,7 +244,7 @@
         "id": 501963,
         "eps": 14,
         "volumes": 0,
-        "collection_total": 21531,
+        "collection_total": 21533,
         "rank": 331
       },
       "subject_id": 501963,
@@ -442,8 +442,8 @@
         "tags": [
           {
             "name": "原创",
-            "count": 1208,
-            "total_count": 624982
+            "count": 1209,
+            "total_count": 624986
           },
           {
             "name": "2026年7月",
@@ -453,22 +453,22 @@
           {
             "name": "奇幻",
             "count": 721,
-            "total_count": 476465
+            "total_count": 476469
           },
           {
             "name": "TV",
             "count": 718,
-            "total_count": 1414281
+            "total_count": 1414282
           },
           {
             "name": "KINEMACITRUS",
             "count": 630,
-            "total_count": 10070
+            "total_count": 10071
           },
           {
             "name": "恋爱",
             "count": 494,
-            "total_count": 569057
+            "total_count": 569058
           },
           {
             "name": "2026",
@@ -496,7 +496,7 @@
         "id": 495291,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 11471,
+        "collection_total": 11472,
         "rank": 877
       },
       "subject_id": 495291,
@@ -611,32 +611,32 @@
           {
             "name": "京阿尼",
             "count": 6828,
-            "total_count": 215132
+            "total_count": 215133
           },
           {
             "name": "剧场版",
             "count": 5716,
-            "total_count": 728894
+            "total_count": 728901
           },
           {
             "name": "百合",
             "count": 5697,
-            "total_count": 406175
+            "total_count": 406194
           },
           {
             "name": "山田尚子",
             "count": 4230,
-            "total_count": 19234
+            "total_count": 19237
           },
           {
             "name": "校园",
             "count": 2604,
-            "total_count": 457654
+            "total_count": 457671
           },
           {
             "name": "音乐",
             "count": 2483,
-            "total_count": 104098
+            "total_count": 104102
           },
           {
             "name": "京都动画",
@@ -646,17 +646,17 @@
           {
             "name": "2018",
             "count": 1954,
-            "total_count": 78401
+            "total_count": 78413
           },
           {
             "name": "轻小说改",
             "count": 1529,
-            "total_count": 499192
+            "total_count": 499204
           },
           {
             "name": "青春",
             "count": 1207,
-            "total_count": 107934
+            "total_count": 107931
           }
         ],
         "score": 8.6,
@@ -664,7 +664,7 @@
         "id": 216371,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 41643,
+        "collection_total": 41644,
         "rank": 27
       },
       "subject_id": 216371,
@@ -695,17 +695,17 @@
           {
             "name": "恋爱",
             "count": 2814,
-            "total_count": 568978
+            "total_count": 569058
           },
           {
             "name": "校园",
             "count": 2160,
-            "total_count": 457591
+            "total_count": 457672
           },
           {
             "name": "日常",
             "count": 1746,
-            "total_count": 403976
+            "total_count": 404030
           },
           {
             "name": "2022年1月",
@@ -720,12 +720,12 @@
           {
             "name": "漫画改",
             "count": 950,
-            "total_count": 869412
+            "total_count": 869587
           },
           {
             "name": "TV",
             "count": 784,
-            "total_count": 1414035
+            "total_count": 1414282
           },
           {
             "name": "SHIN-EI",
@@ -735,12 +735,12 @@
           {
             "name": "2022",
             "count": 533,
-            "total_count": 80848
+            "total_count": 80855
           },
           {
             "name": "漫改",
             "count": 528,
-            "total_count": 363170
+            "total_count": 363249
           }
         ],
         "score": 8,
@@ -748,7 +748,7 @@
         "id": 347887,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 19945,
+        "collection_total": 19946,
         "rank": 211
       },
       "subject_id": 347887,
@@ -863,17 +863,17 @@
           {
             "name": "漫画改",
             "count": 177,
-            "total_count": 869586
+            "total_count": 869587
           },
           {
             "name": "TV",
             "count": 153,
-            "total_count": 1414281
+            "total_count": 1414282
           },
           {
             "name": "2026",
             "count": 145,
-            "total_count": 45051
+            "total_count": 45053
           },
           {
             "name": "Passione",
@@ -901,14 +901,14 @@
             "total_count": 363249
           },
           {
-            "name": "日本",
-            "count": 67,
-            "total_count": 301752
-          },
-          {
             "name": "黑暗",
             "count": 67,
             "total_count": 4696
+          },
+          {
+            "name": "日本",
+            "count": 67,
+            "total_count": 301752
           }
         ],
         "score": 9,
@@ -916,7 +916,7 @@
         "id": 622288,
         "eps": 0,
         "volumes": 0,
-        "collection_total": 2750,
+        "collection_total": 2752,
         "rank": 0
       },
       "subject_id": 622288,
@@ -947,27 +947,27 @@
           {
             "name": "漫画改",
             "count": 141,
-            "total_count": 869576
+            "total_count": 869587
           },
           {
             "name": "Passione",
             "count": 123,
-            "total_count": 11188
+            "total_count": 11189
           },
           {
             "name": "2026年10月",
             "count": 116,
-            "total_count": 1757
+            "total_count": 1766
           },
           {
             "name": "TV",
             "count": 116,
-            "total_count": 1414263
+            "total_count": 1414282
           },
           {
             "name": "日常",
             "count": 111,
-            "total_count": 404024
+            "total_count": 404030
           },
           {
             "name": "喜剧",
@@ -977,17 +977,17 @@
           {
             "name": "校园",
             "count": 100,
-            "total_count": 457669
+            "total_count": 457673
           },
           {
             "name": "2026",
             "count": 72,
-            "total_count": 45039
+            "total_count": 45053
           },
           {
             "name": "日本",
             "count": 50,
-            "total_count": 301738
+            "total_count": 301751
           },
           {
             "name": "今村亮",
@@ -1000,7 +1000,7 @@
         "id": 554779,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 2299,
+        "collection_total": 2303,
         "rank": 0
       },
       "subject_id": 554779,
@@ -2207,12 +2207,12 @@
           {
             "name": "剧场版",
             "count": 137,
-            "total_count": 728900
+            "total_count": 728901
           },
           {
             "name": "漫画改",
             "count": 80,
-            "total_count": 869586
+            "total_count": 869587
           },
           {
             "name": "KINEMACITRUS",
@@ -2222,7 +2222,7 @@
           {
             "name": "2026",
             "count": 70,
-            "total_count": 45051
+            "total_count": 45053
           },
           {
             "name": "奇幻",
@@ -2242,17 +2242,17 @@
           {
             "name": "漫改",
             "count": 39,
-            "total_count": 363248
+            "total_count": 363249
           },
           {
             "name": "日本",
             "count": 29,
-            "total_count": 301750
+            "total_count": 301752
           },
           {
             "name": "TV",
             "count": 18,
-            "total_count": 1414279
+            "total_count": 1414281
           }
         ],
         "score": 8.3,
@@ -2260,7 +2260,7 @@
         "id": 415482,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 1837,
+        "collection_total": 1838,
         "rank": 0
       },
       "subject_id": 415482,
@@ -2375,7 +2375,7 @@
           {
             "name": "百合",
             "count": 3365,
-            "total_count": 406194
+            "total_count": 406198
           },
           {
             "name": "漫画改",
@@ -2385,7 +2385,7 @@
           {
             "name": "日常",
             "count": 1934,
-            "total_count": 404027
+            "total_count": 404030
           },
           {
             "name": "2026年4月",
@@ -2395,7 +2395,7 @@
           {
             "name": "TV",
             "count": 1624,
-            "total_count": 1414281
+            "total_count": 1414282
           },
           {
             "name": "Soigne",
@@ -2410,7 +2410,7 @@
           {
             "name": "日本",
             "count": 927,
-            "total_count": 301752
+            "total_count": 301751
           },
           {
             "name": "吉成钢",
@@ -2428,7 +2428,7 @@
         "id": 543360,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 22536,
+        "collection_total": 22537,
         "rank": 2045
       },
       "subject_id": 543360,
@@ -2795,47 +2795,47 @@
           {
             "name": "剧场版",
             "count": 810,
-            "total_count": 728762
+            "total_count": 728901
           },
           {
             "name": "总集篇",
             "count": 584,
-            "total_count": 18632
+            "total_count": 18639
           },
           {
             "name": "来自深渊",
             "count": 425,
-            "total_count": 7036
+            "total_count": 7039
           },
           {
             "name": "奇幻",
             "count": 374,
-            "total_count": 476276
+            "total_count": 476465
           },
           {
             "name": "2019",
             "count": 336,
-            "total_count": 76925
+            "total_count": 76942
           },
           {
             "name": "冒险",
             "count": 323,
-            "total_count": 54642
+            "total_count": 54670
           },
           {
             "name": "漫画改",
             "count": 303,
-            "total_count": 869300
+            "total_count": 869587
           },
           {
             "name": "KINEMACITRUS",
             "count": 175,
-            "total_count": 10068
+            "total_count": 10070
           },
           {
             "name": "漫改",
             "count": 135,
-            "total_count": 363159
+            "total_count": 363249
           },
           {
             "name": "2019年1月",
@@ -2848,7 +2848,7 @@
         "id": 240799,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 8199,
+        "collection_total": 8200,
         "rank": 311
       },
       "subject_id": 240799,
@@ -2968,7 +2968,7 @@
           {
             "name": "漫画改",
             "count": 3272,
-            "total_count": 869586
+            "total_count": 869587
           },
           {
             "name": "冒险",
@@ -2993,12 +2993,12 @@
           {
             "name": "TV",
             "count": 2057,
-            "total_count": 1414279
+            "total_count": 1414281
           },
           {
             "name": "治愈",
             "count": 1766,
-            "total_count": 303669
+            "total_count": 303671
           },
           {
             "name": "KINEMACITRUS",
@@ -3016,7 +3016,7 @@
         "id": 203526,
         "eps": 13,
         "volumes": 0,
-        "collection_total": 41572,
+        "collection_total": 41573,
         "rank": 117
       },
       "subject_id": 203526,
@@ -3551,17 +3551,17 @@
           {
             "name": "奇幻",
             "count": 2551,
-            "total_count": 476428
+            "total_count": 476465
           },
           {
             "name": "MADHouse",
             "count": 2288,
-            "total_count": 111155
+            "total_count": 111159
           },
           {
             "name": "漫画改",
             "count": 2248,
-            "total_count": 869525
+            "total_count": 869587
           },
           {
             "name": "2026年1月",
@@ -3576,12 +3576,12 @@
           {
             "name": "TV",
             "count": 1865,
-            "total_count": 1414214
+            "total_count": 1414281
           },
           {
             "name": "治愈",
             "count": 1816,
-            "total_count": 303665
+            "total_count": 303671
           },
           {
             "name": "葬送的芙莉莲",
@@ -3591,12 +3591,12 @@
           {
             "name": "日本",
             "count": 1011,
-            "total_count": 301734
+            "total_count": 301752
           },
           {
             "name": "2026",
             "count": 963,
-            "total_count": 45034
+            "total_count": 45053
           }
         ],
         "score": 7.5,
@@ -3719,32 +3719,32 @@
           {
             "name": "百合",
             "count": 6556,
-            "total_count": 406175
+            "total_count": 406198
           },
           {
             "name": "剧场版",
             "count": 5182,
-            "total_count": 728894
+            "total_count": 728901
           },
           {
             "name": "原创",
             "count": 4936,
-            "total_count": 624951
+            "total_count": 624987
           },
           {
             "name": "音乐",
             "count": 3906,
-            "total_count": 104098
+            "total_count": 104102
           },
           {
             "name": "科幻",
             "count": 3253,
-            "total_count": 254785
+            "total_count": 254799
           },
           {
             "name": "奇幻",
             "count": 2544,
-            "total_count": 476427
+            "total_count": 476469
           },
           {
             "name": "2026年1月",
@@ -3754,7 +3754,7 @@
           {
             "name": "日本",
             "count": 2193,
-            "total_count": 301734
+            "total_count": 301751
           },
           {
             "name": "山下清悟",
@@ -3764,7 +3764,7 @@
           {
             "name": "2026",
             "count": 1575,
-            "total_count": 45032
+            "total_count": 45053
           }
         ],
         "score": 8.1,
@@ -3772,7 +3772,7 @@
         "id": 604826,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 44264,
+        "collection_total": 44265,
         "rank": 195
       },
       "subject_id": 604826,
@@ -4060,17 +4060,17 @@
           {
             "name": "科幻",
             "count": 2837,
-            "total_count": 254781
+            "total_count": 254798
           },
           {
             "name": "游戏改",
             "count": 2799,
-            "total_count": 163664
+            "total_count": 163679
           },
           {
             "name": "WHITEFOX",
             "count": 1809,
-            "total_count": 33600
+            "total_count": 33603
           },
           {
             "name": "2018年4月",
@@ -4080,27 +4080,27 @@
           {
             "name": "TV",
             "count": 1563,
-            "total_count": 1414147
+            "total_count": 1414281
           },
           {
             "name": "GAL改",
             "count": 1345,
-            "total_count": 79000
+            "total_count": 79003
           },
           {
             "name": "2018",
             "count": 1013,
-            "total_count": 78392
+            "total_count": 78413
           },
           {
             "name": "悬疑",
             "count": 977,
-            "total_count": 114459
+            "total_count": 114465
           },
           {
             "name": "穿越",
             "count": 851,
-            "total_count": 63565
+            "total_count": 63571
           }
         ],
         "score": 8.2,
@@ -4108,7 +4108,7 @@
         "id": 129807,
         "eps": 24,
         "volumes": 0,
-        "collection_total": 36958,
+        "collection_total": 36959,
         "rank": 120
       },
       "subject_id": 129807,
@@ -4307,7 +4307,7 @@
           {
             "name": "科幻",
             "count": 14062,
-            "total_count": 254784
+            "total_count": 254798
           },
           {
             "name": "中二病",
@@ -4332,7 +4332,7 @@
           {
             "name": "游戏改",
             "count": 6771,
-            "total_count": 163667
+            "total_count": 163679
           },
           {
             "name": "2011年4月",
@@ -4342,7 +4342,7 @@
           {
             "name": "TV",
             "count": 5711,
-            "total_count": 1414206
+            "total_count": 1414281
           },
           {
             "name": "花泽香菜",
@@ -4360,7 +4360,7 @@
         "id": 10380,
         "eps": 25,
         "volumes": 0,
-        "collection_total": 78960,
+        "collection_total": 78961,
         "rank": 8
       },
       "subject_id": 10380,
@@ -4811,22 +4811,22 @@
           {
             "name": "EVA",
             "count": 2610,
-            "total_count": 37080
+            "total_count": 37081
           },
           {
             "name": "剧场版",
             "count": 2433,
-            "total_count": 728870
+            "total_count": 728901
           },
           {
             "name": "庵野秀明",
             "count": 2072,
-            "total_count": 36980
+            "total_count": 36981
           },
           {
             "name": "GAINAX",
             "count": 1218,
-            "total_count": 40620
+            "total_count": 40622
           },
           {
             "name": "1997",
@@ -4836,12 +4836,12 @@
           {
             "name": "科幻",
             "count": 868,
-            "total_count": 254781
+            "total_count": 254799
           },
           {
             "name": "原创",
             "count": 792,
-            "total_count": 624957
+            "total_count": 624982
           },
           {
             "name": "新世纪福音战士",
@@ -4864,7 +4864,7 @@
         "id": 6048,
         "eps": 2,
         "volumes": 0,
-        "collection_total": 21862,
+        "collection_total": 21863,
         "rank": 160
       },
       "subject_id": 6048,
@@ -5083,7 +5083,7 @@
           {
             "name": "科幻",
             "count": 4563,
-            "total_count": 254795
+            "total_count": 254798
           },
           {
             "name": "神作",
@@ -5093,7 +5093,7 @@
           {
             "name": "TV",
             "count": 2868,
-            "total_count": 1414267
+            "total_count": 1414281
           },
           {
             "name": "宗教",
@@ -5103,7 +5103,7 @@
           {
             "name": "原创",
             "count": 2203,
-            "total_count": 624977
+            "total_count": 624982
           },
           {
             "name": "心理",
@@ -5116,7 +5116,7 @@
         "id": 265,
         "eps": 26,
         "volumes": 0,
-        "collection_total": 64716,
+        "collection_total": 64717,
         "rank": 23
       },
       "subject_id": 265,
@@ -5147,22 +5147,22 @@
           {
             "name": "百合",
             "count": 4604,
-            "total_count": 406175
+            "total_count": 406198
           },
           {
             "name": "恋爱",
             "count": 2713,
-            "total_count": 569039
+            "total_count": 569059
           },
           {
             "name": "校园",
             "count": 1878,
-            "total_count": 457655
+            "total_count": 457673
           },
           {
             "name": "漫画改",
             "count": 1618,
-            "total_count": 869524
+            "total_count": 869587
           },
           {
             "name": "2018年10月",
@@ -5172,7 +5172,7 @@
           {
             "name": "TV",
             "count": 1382,
-            "total_count": 1414211
+            "total_count": 1414282
           },
           {
             "name": "TROYCA",
@@ -5187,12 +5187,12 @@
           {
             "name": "漫改",
             "count": 873,
-            "total_count": 363241
+            "total_count": 363249
           },
           {
             "name": "2018",
             "count": 809,
-            "total_count": 78401
+            "total_count": 78413
           }
         ],
         "score": 7.8,
@@ -5200,7 +5200,7 @@
         "id": 243981,
         "eps": 13,
         "volumes": 0,
-        "collection_total": 27428,
+        "collection_total": 27430,
         "rank": 387
       },
       "subject_id": 243981,
@@ -5572,7 +5572,7 @@
           {
             "name": "日常",
             "count": 2057,
-            "total_count": 404015
+            "total_count": 404030
           },
           {
             "name": "StudioBind",
@@ -5582,7 +5582,7 @@
           {
             "name": "漫画改",
             "count": 1972,
-            "total_count": 869553
+            "total_count": 869587
           },
           {
             "name": "2025年7月",
@@ -5592,7 +5592,7 @@
           {
             "name": "TV",
             "count": 1589,
-            "total_count": 1414242
+            "total_count": 1414282
           },
           {
             "name": "矿物",
@@ -5607,12 +5607,12 @@
           {
             "name": "2025",
             "count": 817,
-            "total_count": 73390
+            "total_count": 73391
           },
           {
             "name": "日本",
             "count": 785,
-            "total_count": 301736
+            "total_count": 301752
           }
         ],
         "score": 8.1,
@@ -5620,7 +5620,7 @@
         "id": 512190,
         "eps": 13,
         "volumes": 0,
-        "collection_total": 25633,
+        "collection_total": 25635,
         "rank": 198
       },
       "subject_id": 512190,
@@ -5735,12 +5735,12 @@
           {
             "name": "日常",
             "count": 1835,
-            "total_count": 404014
+            "total_count": 404030
           },
           {
             "name": "漫画改",
             "count": 1384,
-            "total_count": 869528
+            "total_count": 869587
           },
           {
             "name": "2025年7月",
@@ -5750,7 +5750,7 @@
           {
             "name": "TV",
             "count": 1094,
-            "total_count": 1414221
+            "total_count": 1414282
           },
           {
             "name": "花田十辉",
@@ -5760,12 +5760,12 @@
           {
             "name": "百合",
             "count": 881,
-            "total_count": 406177
+            "total_count": 406198
           },
           {
             "name": "搞笑",
             "count": 817,
-            "total_count": 643445
+            "total_count": 643473
           },
           {
             "name": "AtelierPontdarc",
@@ -5775,12 +5775,12 @@
           {
             "name": "2025",
             "count": 625,
-            "total_count": 73390
+            "total_count": 73391
           },
           {
             "name": "日本",
             "count": 541,
-            "total_count": 301734
+            "total_count": 301751
           }
         ],
         "score": 7.5,
@@ -5903,12 +5903,12 @@
           {
             "name": "原创",
             "count": 4578,
-            "total_count": 624951
+            "total_count": 624982
           },
           {
             "name": "科幻",
             "count": 3753,
-            "total_count": 254784
+            "total_count": 254799
           },
           {
             "name": "2025年4月",
@@ -5928,27 +5928,27 @@
           {
             "name": "治愈",
             "count": 2516,
-            "total_count": 303665
+            "total_count": 303671
           },
           {
             "name": "TV",
             "count": 2234,
-            "total_count": 1414208
+            "total_count": 1414281
           },
           {
             "name": "奇幻",
             "count": 2110,
-            "total_count": 476427
+            "total_count": 476469
           },
           {
             "name": "日常",
             "count": 1772,
-            "total_count": 404012
+            "total_count": 404030
           },
           {
             "name": "日本",
             "count": 1373,
-            "total_count": 301734
+            "total_count": 301752
           }
         ],
         "score": 8.2,
@@ -5956,7 +5956,7 @@
         "id": 509986,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 36853,
+        "collection_total": 36854,
         "rank": 145
       },
       "subject_id": 509986,
@@ -6491,27 +6491,27 @@
           {
             "name": "OVA",
             "count": 1151,
-            "total_count": 367189
+            "total_count": 367232
           },
           {
             "name": "搞笑",
             "count": 1042,
-            "total_count": 643408
+            "total_count": 643473
           },
           {
             "name": "异世界",
             "count": 996,
-            "total_count": 264802
+            "total_count": 264836
           },
           {
             "name": "2025",
             "count": 584,
-            "total_count": 73387
+            "total_count": 73391
           },
           {
             "name": "轻小说改",
             "count": 541,
-            "total_count": 499142
+            "total_count": 499204
           },
           {
             "name": "為美好的世界獻上祝福！",
@@ -6526,12 +6526,12 @@
           {
             "name": "小说改",
             "count": 367,
-            "total_count": 161511
+            "total_count": 161545
           },
           {
             "name": "奇幻",
             "count": 311,
-            "total_count": 476359
+            "total_count": 476465
           },
           {
             "name": "drive",
@@ -6544,7 +6544,7 @@
         "id": 513089,
         "eps": 2,
         "volumes": 0,
-        "collection_total": 13176,
+        "collection_total": 13177,
         "rank": 941
       },
       "subject_id": 513089,
@@ -6743,7 +6743,7 @@
           {
             "name": "剧场版",
             "count": 3585,
-            "total_count": 728874
+            "total_count": 728901
           },
           {
             "name": "藤本树",
@@ -6753,17 +6753,17 @@
           {
             "name": "漫画改",
             "count": 2183,
-            "total_count": 869507
+            "total_count": 869587
           },
           {
             "name": "2024",
             "count": 1721,
-            "total_count": 71936
+            "total_count": 71941
           },
           {
             "name": "押山清高",
             "count": 1679,
-            "total_count": 2696
+            "total_count": 2697
           },
           {
             "name": "StudioDURIAN",
@@ -6773,22 +6773,22 @@
           {
             "name": "青春",
             "count": 1202,
-            "total_count": 107933
+            "total_count": 107931
           },
           {
             "name": "日本",
             "count": 842,
-            "total_count": 301730
+            "total_count": 301752
           },
           {
             "name": "漫改",
             "count": 829,
-            "total_count": 363208
+            "total_count": 363249
           },
           {
             "name": "治愈",
             "count": 824,
-            "total_count": 303664
+            "total_count": 303671
           }
         ],
         "score": 7.8,
@@ -6796,7 +6796,7 @@
         "id": 480441,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 23572,
+        "collection_total": 23573,
         "rank": 361
       },
       "subject_id": 480441,
@@ -6911,22 +6911,22 @@
           {
             "name": "搞笑",
             "count": 6419,
-            "total_count": 643444
+            "total_count": 643473
           },
           {
             "name": "动画工房",
             "count": 3503,
-            "total_count": 63777
+            "total_count": 63780
           },
           {
             "name": "漫画改",
             "count": 3229,
-            "total_count": 869524
+            "total_count": 869587
           },
           {
             "name": "恋爱",
             "count": 2790,
-            "total_count": 569039
+            "total_count": 569059
           },
           {
             "name": "2014年7月",
@@ -6936,17 +6936,17 @@
           {
             "name": "校园",
             "count": 2567,
-            "total_count": 457655
+            "total_count": 457673
           },
           {
             "name": "纯爱",
             "count": 2028,
-            "total_count": 39412
+            "total_count": 39413
           },
           {
             "name": "TV",
             "count": 2017,
-            "total_count": 1414212
+            "total_count": 1414282
           },
           {
             "name": "月刊少女野崎君",
@@ -6956,7 +6956,7 @@
           {
             "name": "2014",
             "count": 1190,
-            "total_count": 71560
+            "total_count": 71562
           }
         ],
         "score": 7.8,
@@ -6964,7 +6964,7 @@
         "id": 100449,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 44484,
+        "collection_total": 44485,
         "rank": 423
       },
       "subject_id": 100449,
@@ -6995,27 +6995,27 @@
           {
             "name": "BanGDream",
             "count": 8112,
-            "total_count": 20825
+            "total_count": 20830
           },
           {
             "name": "原创",
             "count": 7490,
-            "total_count": 624952
+            "total_count": 624986
           },
           {
             "name": "音乐",
             "count": 6871,
-            "total_count": 104098
+            "total_count": 104102
           },
           {
             "name": "百合",
             "count": 6039,
-            "total_count": 406177
+            "total_count": 406198
           },
           {
             "name": "扭曲",
             "count": 5532,
-            "total_count": 12115
+            "total_count": 12116
           },
           {
             "name": "2023年7月",
@@ -7025,22 +7025,22 @@
           {
             "name": "乐队",
             "count": 3096,
-            "total_count": 23387
+            "total_count": 23392
           },
           {
             "name": "偶像",
             "count": 3009,
-            "total_count": 71893
+            "total_count": 71896
           },
           {
             "name": "TV",
             "count": 2915,
-            "total_count": 1414222
+            "total_count": 1414282
           },
           {
             "name": "3D",
             "count": 2597,
-            "total_count": 51391
+            "total_count": 51394
           }
         ],
         "score": 7.9,
@@ -7048,7 +7048,7 @@
         "id": 428735,
         "eps": 13,
         "volumes": 0,
-        "collection_total": 57481,
+        "collection_total": 57482,
         "rank": 278
       },
       "subject_id": 428735,
@@ -7163,12 +7163,12 @@
           {
             "name": "恋爱",
             "count": 7801,
-            "total_count": 569056
+            "total_count": 569058
           },
           {
             "name": "校园",
             "count": 7203,
-            "total_count": 457670
+            "total_count": 457672
           },
           {
             "name": "A-1Pictures",
@@ -7198,12 +7198,12 @@
           {
             "name": "搞笑",
             "count": 3053,
-            "total_count": 643470
+            "total_count": 643474
           },
           {
             "name": "TV",
             "count": 2559,
-            "total_count": 1414281
+            "total_count": 1414282
           },
           {
             "name": "轻改",
@@ -7216,7 +7216,7 @@
         "id": 464376,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 58689,
+        "collection_total": 58690,
         "rank": 264
       },
       "subject_id": 464376,
@@ -7499,7 +7499,7 @@
           {
             "name": "新房昭之",
             "count": 4311,
-            "total_count": 102133
+            "total_count": 102134
           },
           {
             "name": "西尾维新",
@@ -7509,7 +7509,7 @@
           {
             "name": "SHAFT",
             "count": 2047,
-            "total_count": 67617
+            "total_count": 67618
           },
           {
             "name": "伪物语",
@@ -7529,17 +7529,17 @@
           {
             "name": "TV",
             "count": 1367,
-            "total_count": 1414193
+            "total_count": 1414282
           },
           {
             "name": "轻小说改",
             "count": 881,
-            "total_count": 499190
+            "total_count": 499204
           },
           {
             "name": "2012",
             "count": 766,
-            "total_count": 55910
+            "total_count": 55918
           },
           {
             "name": "战场原荡漾",
@@ -7552,7 +7552,7 @@
         "id": 23161,
         "eps": 11,
         "volumes": 0,
-        "collection_total": 30383,
+        "collection_total": 30384,
         "rank": 332
       },
       "subject_id": 23161,
@@ -7583,12 +7583,12 @@
           {
             "name": "剧场版",
             "count": 2632,
-            "total_count": 728888
+            "total_count": 728901
           },
           {
             "name": "新房昭之",
             "count": 2204,
-            "total_count": 102133
+            "total_count": 102134
           },
           {
             "name": "物语系列",
@@ -7598,7 +7598,7 @@
           {
             "name": "SHAFT",
             "count": 1608,
-            "total_count": 67617
+            "total_count": 67618
           },
           {
             "name": "西尾維新",
@@ -7608,17 +7608,17 @@
           {
             "name": "轻小说改",
             "count": 921,
-            "total_count": 499190
+            "total_count": 499204
           },
           {
             "name": "2017",
             "count": 883,
-            "total_count": 71795
+            "total_count": 71797
           },
           {
             "name": "奇幻",
             "count": 664,
-            "total_count": 476418
+            "total_count": 476465
           },
           {
             "name": "尾石达也",
@@ -7636,7 +7636,7 @@
         "id": 148037,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 19182,
+        "collection_total": 19183,
         "rank": 113
       },
       "subject_id": 148037,
@@ -7751,12 +7751,12 @@
           {
             "name": "剧场版",
             "count": 2588,
-            "total_count": 728888
+            "total_count": 728901
           },
           {
             "name": "新房昭之",
             "count": 2392,
-            "total_count": 102133
+            "total_count": 102134
           },
           {
             "name": "西尾维新",
@@ -7771,12 +7771,12 @@
           {
             "name": "SHAFT",
             "count": 1607,
-            "total_count": 67617
+            "total_count": 67618
           },
           {
             "name": "2016",
             "count": 1022,
-            "total_count": 71475
+            "total_count": 71482
           },
           {
             "name": "伤物语",
@@ -7786,12 +7786,12 @@
           {
             "name": "轻小说改",
             "count": 754,
-            "total_count": 499190
+            "total_count": 499204
           },
           {
             "name": "奇幻",
             "count": 567,
-            "total_count": 476417
+            "total_count": 476469
           },
           {
             "name": "小忍",
@@ -7804,7 +7804,7 @@
         "id": 7707,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 20343,
+        "collection_total": 20344,
         "rank": 270
       },
       "subject_id": 7707,
@@ -8591,17 +8591,17 @@
           {
             "name": "搞笑",
             "count": 3846,
-            "total_count": 643446
+            "total_count": 643473
           },
           {
             "name": "异世界",
             "count": 3752,
-            "total_count": 264829
+            "total_count": 264836
           },
           {
             "name": "轻小说改",
             "count": 2016,
-            "total_count": 499199
+            "total_count": 499204
           },
           {
             "name": "2024年4月",
@@ -8611,7 +8611,7 @@
           {
             "name": "TV",
             "count": 1445,
-            "total_count": 1414223
+            "total_count": 1414281
           },
           {
             "name": "为美好的世界献上祝福",
@@ -8621,22 +8621,22 @@
           {
             "name": "奇幻",
             "count": 1239,
-            "total_count": 476432
+            "total_count": 476465
           },
           {
             "name": "J.C.STAFF",
             "count": 1154,
-            "total_count": 137507
+            "total_count": 137514
           },
           {
             "name": "2024",
             "count": 781,
-            "total_count": 71936
+            "total_count": 71941
           },
           {
             "name": "轻改",
             "count": 725,
-            "total_count": 153227
+            "total_count": 153228
           }
         ],
         "score": 7.7,
@@ -8644,7 +8644,7 @@
         "id": 342667,
         "eps": 11,
         "volumes": 0,
-        "collection_total": 32142,
+        "collection_total": 32143,
         "rank": 595
       },
       "subject_id": 342667,
@@ -9016,7 +9016,7 @@
           {
             "name": "百合",
             "count": 3600,
-            "total_count": 406191
+            "total_count": 406198
           },
           {
             "name": "废土",
@@ -9036,12 +9036,12 @@
           {
             "name": "治愈",
             "count": 2271,
-            "total_count": 303669
+            "total_count": 303671
           },
           {
             "name": "漫画改",
             "count": 2216,
-            "total_count": 869586
+            "total_count": 869587
           },
           {
             "name": "2017年10月",
@@ -9051,7 +9051,7 @@
           {
             "name": "TV",
             "count": 1768,
-            "total_count": 1414279
+            "total_count": 1414282
           },
           {
             "name": "少女终末旅行",
@@ -9064,7 +9064,7 @@
         "id": 218707,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 40204,
+        "collection_total": 40205,
         "rank": 161
       },
       "subject_id": 218707,
@@ -9347,7 +9347,7 @@
           {
             "name": "剧场版",
             "count": 5643,
-            "total_count": 728900
+            "total_count": 728901
           },
           {
             "name": "游戏人生",
@@ -9367,7 +9367,7 @@
           {
             "name": "奇幻",
             "count": 2318,
-            "total_count": 476465
+            "total_count": 476469
           },
           {
             "name": "催泪",
@@ -9400,7 +9400,7 @@
         "id": 187276,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 39071,
+        "collection_total": 39072,
         "rank": 151
       },
       "subject_id": 187276,
@@ -9431,17 +9431,17 @@
           {
             "name": "轻小说改",
             "count": 5185,
-            "total_count": 499195
+            "total_count": 499204
           },
           {
             "name": "MADHouse",
             "count": 3828,
-            "total_count": 111155
+            "total_count": 111159
           },
           {
             "name": "异世界",
             "count": 3223,
-            "total_count": 264828
+            "total_count": 264836
           },
           {
             "name": "2014年4月",
@@ -9451,7 +9451,7 @@
           {
             "name": "TV",
             "count": 2483,
-            "total_count": 1414212
+            "total_count": 1414282
           },
           {
             "name": "游戏",
@@ -9466,17 +9466,17 @@
           {
             "name": "奇幻",
             "count": 2120,
-            "total_count": 476427
+            "total_count": 476469
           },
           {
             "name": "搞笑",
             "count": 1857,
-            "total_count": 643444
+            "total_count": 643473
           },
           {
             "name": "2014",
             "count": 1337,
-            "total_count": 71560
+            "total_count": 71562
           }
         ],
         "score": 7.8,
@@ -9484,7 +9484,7 @@
         "id": 79227,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 52127,
+        "collection_total": 52129,
         "rank": 462
       },
       "subject_id": 79227,
@@ -9767,7 +9767,7 @@
           {
             "name": "治愈",
             "count": 8044,
-            "total_count": 303669
+            "total_count": 303670
           },
           {
             "name": "公路片",
@@ -9787,7 +9787,7 @@
           {
             "name": "漫画改",
             "count": 5861,
-            "total_count": 869586
+            "total_count": 869587
           },
           {
             "name": "2023年10月",
@@ -9807,7 +9807,7 @@
           {
             "name": "TV",
             "count": 3174,
-            "total_count": 1414278
+            "total_count": 1414281
           },
           {
             "name": "斋藤圭一郎",
@@ -9820,7 +9820,7 @@
         "id": 400602,
         "eps": 28,
         "volumes": 0,
-        "collection_total": 75210,
+        "collection_total": 75211,
         "rank": 42
       },
       "subject_id": 400602,
@@ -9851,12 +9851,12 @@
           {
             "name": "剧场版",
             "count": 5286,
-            "total_count": 728872
+            "total_count": 728901
           },
           {
             "name": "新房昭之",
             "count": 4149,
-            "total_count": 102131
+            "total_count": 102134
           },
           {
             "name": "虚渊玄",
@@ -9871,17 +9871,17 @@
           {
             "name": "SHAFT",
             "count": 2549,
-            "total_count": 67616
+            "total_count": 67618
           },
           {
             "name": "百合",
             "count": 2299,
-            "total_count": 406181
+            "total_count": 406198
           },
           {
             "name": "原创",
             "count": 2192,
-            "total_count": 624957
+            "total_count": 624987
           },
           {
             "name": "梶浦由记",
@@ -9891,12 +9891,12 @@
           {
             "name": "2013",
             "count": 1674,
-            "total_count": 69247
+            "total_count": 69255
           },
           {
             "name": "魔法少女",
             "count": 1235,
-            "total_count": 37039
+            "total_count": 37042
           }
         ],
         "score": 8.6,
@@ -9904,7 +9904,7 @@
         "id": 44693,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 34068,
+        "collection_total": 34069,
         "rank": 34
       },
       "subject_id": 44693,
@@ -9935,7 +9935,7 @@
           {
             "name": "剧场版",
             "count": 2074,
-            "total_count": 728813
+            "total_count": 728901
           },
           {
             "name": "虚渊玄",
@@ -9945,32 +9945,32 @@
           {
             "name": "新房昭之",
             "count": 1304,
-            "total_count": 102125
+            "total_count": 102134
           },
           {
             "name": "魔法少女小圆",
             "count": 1164,
-            "total_count": 7745
+            "total_count": 7746
           },
           {
             "name": "SHAFT",
             "count": 999,
-            "total_count": 67613
+            "total_count": 67618
           },
           {
             "name": "百合",
             "count": 737,
-            "total_count": 406125
+            "total_count": 406198
           },
           {
             "name": "原创",
             "count": 648,
-            "total_count": 624882
+            "total_count": 624985
           },
           {
             "name": "2012",
             "count": 642,
-            "total_count": 55910
+            "total_count": 55918
           },
           {
             "name": "梶浦由记",
@@ -9980,7 +9980,7 @@
           {
             "name": "魔法少女",
             "count": 446,
-            "total_count": 37036
+            "total_count": 37041
           }
         ],
         "score": 8.1,
@@ -9988,7 +9988,7 @@
         "id": 44692,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 15724,
+        "collection_total": 15725,
         "rank": 188
       },
       "subject_id": 44692,
@@ -10019,7 +10019,7 @@
           {
             "name": "剧场版",
             "count": 1943,
-            "total_count": 728822
+            "total_count": 728901
           },
           {
             "name": "虚渊玄",
@@ -10029,7 +10029,7 @@
           {
             "name": "新房昭之",
             "count": 1226,
-            "total_count": 102127
+            "total_count": 102134
           },
           {
             "name": "魔法少女小圆",
@@ -10039,22 +10039,22 @@
           {
             "name": "SHAFT",
             "count": 923,
-            "total_count": 67613
+            "total_count": 67618
           },
           {
             "name": "百合",
             "count": 653,
-            "total_count": 406133
+            "total_count": 406198
           },
           {
             "name": "原创",
             "count": 606,
-            "total_count": 624897
+            "total_count": 624986
           },
           {
             "name": "2012",
             "count": 553,
-            "total_count": 55910
+            "total_count": 55918
           },
           {
             "name": "梶浦由记",
@@ -10064,7 +10064,7 @@
           {
             "name": "总集篇",
             "count": 398,
-            "total_count": 18633
+            "total_count": 18639
           }
         ],
         "score": 7.9,
@@ -10072,7 +10072,7 @@
         "id": 25833,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 14127,
+        "collection_total": 14128,
         "rank": 287
       },
       "subject_id": 25833,
@@ -10128,7 +10128,7 @@
           {
             "name": "原创",
             "count": 4176,
-            "total_count": 624979
+            "total_count": 624982
           },
           {
             "name": "SHAFT",
@@ -10143,12 +10143,12 @@
           {
             "name": "治愈",
             "count": 2951,
-            "total_count": 303669
+            "total_count": 303670
           },
           {
             "name": "TV",
             "count": 2856,
-            "total_count": 1414277
+            "total_count": 1414281
           }
         ],
         "score": 8.6,
@@ -10156,7 +10156,7 @@
         "id": 9717,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 71597,
+        "collection_total": 71598,
         "rank": 35
       },
       "subject_id": 9717,
@@ -10324,7 +10324,7 @@
         "id": 298,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 28691,
+        "collection_total": 28692,
         "rank": 47
       },
       "subject_id": 298,
@@ -10660,7 +10660,7 @@
         "id": 362577,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 26775,
+        "collection_total": 26776,
         "rank": 4944
       },
       "subject_id": 362577,
@@ -10948,17 +10948,17 @@
           {
             "name": "治愈",
             "count": 4227,
-            "total_count": 303669
+            "total_count": 303671
           },
           {
             "name": "百合",
             "count": 3825,
-            "total_count": 406191
+            "total_count": 406197
           },
           {
             "name": "日常",
             "count": 3206,
-            "total_count": 404026
+            "total_count": 404030
           },
           {
             "name": "2018年1月",
@@ -10968,12 +10968,12 @@
           {
             "name": "漫画改",
             "count": 2229,
-            "total_count": 869586
+            "total_count": 869587
           },
           {
             "name": "TV",
             "count": 1944,
-            "total_count": 1414279
+            "total_count": 1414281
           },
           {
             "name": "摇曳露营△",
@@ -10996,7 +10996,7 @@
         "id": 207195,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 40768,
+        "collection_total": 40769,
         "rank": 119
       },
       "subject_id": 207195,
@@ -11111,22 +11111,22 @@
           {
             "name": "恋爱",
             "count": 5467,
-            "total_count": 569033
+            "total_count": 569059
           },
           {
             "name": "校园",
             "count": 4091,
-            "total_count": 457641
+            "total_count": 457673
           },
           {
             "name": "2023年4月",
             "count": 2503,
-            "total_count": 35628
+            "total_count": 35632
           },
           {
             "name": "漫画改",
             "count": 2470,
-            "total_count": 869502
+            "total_count": 869587
           },
           {
             "name": "牛尾宪辅",
@@ -11136,17 +11136,17 @@
           {
             "name": "TV",
             "count": 1610,
-            "total_count": 1414147
+            "total_count": 1414282
           },
           {
             "name": "日常",
             "count": 1470,
-            "total_count": 404011
+            "total_count": 404030
           },
           {
             "name": "纯爱",
             "count": 1222,
-            "total_count": 39409
+            "total_count": 39413
           },
           {
             "name": "SHIN-EI",
@@ -11156,7 +11156,7 @@
           {
             "name": "漫改",
             "count": 1051,
-            "total_count": 363200
+            "total_count": 363249
           }
         ],
         "score": 7.8,
@@ -11164,7 +11164,7 @@
         "id": 394260,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 36747,
+        "collection_total": 36748,
         "rank": 390
       },
       "subject_id": 394260,
@@ -11615,17 +11615,17 @@
           {
             "name": "异世界",
             "count": 7539,
-            "total_count": 264828
+            "total_count": 264836
           },
           {
             "name": "轻小说改",
             "count": 4970,
-            "total_count": 499192
+            "total_count": 499204
           },
           {
             "name": "奇幻",
             "count": 3316,
-            "total_count": 476427
+            "total_count": 476465
           },
           {
             "name": "冒险",
@@ -11645,22 +11645,22 @@
           {
             "name": "后宫",
             "count": 2382,
-            "total_count": 305560
+            "total_count": 305571
           },
           {
             "name": "TV",
             "count": 2248,
-            "total_count": 1414207
+            "total_count": 1414281
           },
           {
             "name": "穿越",
             "count": 1605,
-            "total_count": 63566
+            "total_count": 63571
           },
           {
             "name": "战斗",
             "count": 1509,
-            "total_count": 476052
+            "total_count": 476054
           }
         ],
         "score": 8.3,
@@ -11668,7 +11668,7 @@
         "id": 325585,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 48074,
+        "collection_total": 48075,
         "rank": 85
       },
       "subject_id": 325585,
@@ -11699,37 +11699,37 @@
           {
             "name": "异世界",
             "count": 7874,
-            "total_count": 264828
+            "total_count": 264836
           },
           {
             "name": "轻小说改",
             "count": 5317,
-            "total_count": 499195
+            "total_count": 499204
           },
           {
             "name": "后宫",
             "count": 3245,
-            "total_count": 305562
+            "total_count": 305571
           },
           {
             "name": "2021年1月",
             "count": 3131,
-            "total_count": 31678
+            "total_count": 31679
           },
           {
             "name": "奇幻",
             "count": 3026,
-            "total_count": 476427
+            "total_count": 476469
           },
           {
             "name": "穿越",
             "count": 2918,
-            "total_count": 63566
+            "total_count": 63571
           },
           {
             "name": "TV",
             "count": 2507,
-            "total_count": 1414212
+            "total_count": 1414282
           },
           {
             "name": "StudioBind",
@@ -11739,12 +11739,12 @@
           {
             "name": "战斗",
             "count": 1859,
-            "total_count": 476051
+            "total_count": 476054
           },
           {
             "name": "轻改",
             "count": 1442,
-            "total_count": 153227
+            "total_count": 153228
           }
         ],
         "score": 8,
@@ -11752,7 +11752,7 @@
         "id": 277554,
         "eps": 11,
         "volumes": 0,
-        "collection_total": 54406,
+        "collection_total": 54407,
         "rank": 267
       },
       "subject_id": 277554,
@@ -12203,17 +12203,17 @@
           {
             "name": "异世界",
             "count": 2754,
-            "total_count": 264824
+            "total_count": 264836
           },
           {
             "name": "搞笑",
             "count": 2572,
-            "total_count": 643438
+            "total_count": 643474
           },
           {
             "name": "2023年4月",
             "count": 1749,
-            "total_count": 35628
+            "total_count": 35632
           },
           {
             "name": "为美好的世界献上祝福",
@@ -12223,32 +12223,32 @@
           {
             "name": "轻小说改",
             "count": 1279,
-            "total_count": 499180
+            "total_count": 499204
           },
           {
             "name": "TV",
             "count": 1029,
-            "total_count": 1414146
+            "total_count": 1414282
           },
           {
             "name": "奇幻",
             "count": 929,
-            "total_count": 476417
+            "total_count": 476469
           },
           {
             "name": "日常",
             "count": 770,
-            "total_count": 404007
+            "total_count": 404030
           },
           {
             "name": "轻改",
             "count": 693,
-            "total_count": 153216
+            "total_count": 153228
           },
           {
             "name": "2023",
             "count": 687,
-            "total_count": 81892
+            "total_count": 81902
           }
         ],
         "score": 7,
@@ -12256,7 +12256,7 @@
         "id": 385209,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 25623,
+        "collection_total": 25624,
         "rank": 2499
       },
       "subject_id": 385209,
@@ -12371,17 +12371,17 @@
           {
             "name": "搞笑",
             "count": 5093,
-            "total_count": 643449
+            "total_count": 643474
           },
           {
             "name": "异世界",
             "count": 3810,
-            "total_count": 264831
+            "total_count": 264836
           },
           {
             "name": "轻小说改",
             "count": 3101,
-            "total_count": 499201
+            "total_count": 499204
           },
           {
             "name": "2017年1月",
@@ -12396,12 +12396,12 @@
           {
             "name": "TV",
             "count": 1734,
-            "total_count": 1414229
+            "total_count": 1414282
           },
           {
             "name": "后宫",
             "count": 1391,
-            "total_count": 305565
+            "total_count": 305571
           },
           {
             "name": "studiodeen",
@@ -12411,12 +12411,12 @@
           {
             "name": "奇幻",
             "count": 1008,
-            "total_count": 476434
+            "total_count": 476469
           },
           {
             "name": "轻改",
             "count": 944,
-            "total_count": 153227
+            "total_count": 153228
           }
         ],
         "score": 7.7,
@@ -12424,7 +12424,7 @@
         "id": 174043,
         "eps": 10,
         "volumes": 0,
-        "collection_total": 40124,
+        "collection_total": 40125,
         "rank": 541
       },
       "subject_id": 174043,
@@ -12455,17 +12455,17 @@
           {
             "name": "搞笑",
             "count": 6617,
-            "total_count": 643449
+            "total_count": 643473
           },
           {
             "name": "异世界",
             "count": 4169,
-            "total_count": 264831
+            "total_count": 264836
           },
           {
             "name": "轻小说改",
             "count": 4065,
-            "total_count": 499201
+            "total_count": 499204
           },
           {
             "name": "2016年1月",
@@ -12480,17 +12480,17 @@
           {
             "name": "穿越",
             "count": 2225,
-            "total_count": 63547
+            "total_count": 63571
           },
           {
             "name": "TV",
             "count": 2185,
-            "total_count": 1414229
+            "total_count": 1414281
           },
           {
             "name": "后宫",
             "count": 1806,
-            "total_count": 305565
+            "total_count": 305571
           },
           {
             "name": "studiodeen",
@@ -12508,7 +12508,7 @@
         "id": 135275,
         "eps": 10,
         "volumes": 0,
-        "collection_total": 50692,
+        "collection_total": 50693,
         "rank": 552
       },
       "subject_id": 135275,
@@ -12806,12 +12806,12 @@
           {
             "name": "CloverWorks",
             "count": 7065,
-            "total_count": 56691
+            "total_count": 56692
           },
           {
             "name": "日常",
             "count": 6900,
-            "total_count": 404026
+            "total_count": 404030
           },
           {
             "name": "乐队题材",
@@ -12821,7 +12821,7 @@
           {
             "name": "漫画改",
             "count": 4734,
-            "total_count": 869586
+            "total_count": 869587
           },
           {
             "name": "2022年10月",
@@ -12831,12 +12831,12 @@
           {
             "name": "搞笑",
             "count": 3333,
-            "total_count": 643470
+            "total_count": 643473
           },
           {
             "name": "TV",
             "count": 3134,
-            "total_count": 1414279
+            "total_count": 1414281
           }
         ],
         "score": 8.4,
@@ -12844,7 +12844,7 @@
         "id": 328609,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 77119,
+        "collection_total": 77120,
         "rank": 73
       },
       "subject_id": 328609,
@@ -13043,27 +13043,27 @@
           {
             "name": "恋爱",
             "count": 6988,
-            "total_count": 569039
+            "total_count": 569058
           },
           {
             "name": "搞笑",
             "count": 6221,
-            "total_count": 643444
+            "total_count": 643473
           },
           {
             "name": "校园",
             "count": 4506,
-            "total_count": 457655
+            "total_count": 457672
           },
           {
             "name": "A-1Pictures",
             "count": 4113,
-            "total_count": 146423
+            "total_count": 146427
           },
           {
             "name": "漫画改",
             "count": 2809,
-            "total_count": 869524
+            "total_count": 869587
           },
           {
             "name": "2020年4月",
@@ -13073,22 +13073,22 @@
           {
             "name": "TV",
             "count": 2162,
-            "total_count": 1414211
+            "total_count": 1414282
           },
           {
             "name": "日常",
             "count": 2133,
-            "total_count": 404012
+            "total_count": 404030
           },
           {
             "name": "漫改",
             "count": 1534,
-            "total_count": 363241
+            "total_count": 363249
           },
           {
             "name": "2020",
             "count": 1399,
-            "total_count": 64256
+            "total_count": 64262
           }
         ],
         "score": 7.9,
@@ -13096,7 +13096,7 @@
         "id": 293049,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 48695,
+        "collection_total": 48697,
         "rank": 312
       },
       "subject_id": 293049,
@@ -13127,27 +13127,27 @@
           {
             "name": "恋爱",
             "count": 7997,
-            "total_count": 569040
+            "total_count": 569059
           },
           {
             "name": "搞笑",
             "count": 7073,
-            "total_count": 643447
+            "total_count": 643473
           },
           {
             "name": "A-1Pictures",
             "count": 4715,
-            "total_count": 146423
+            "total_count": 146427
           },
           {
             "name": "校园",
             "count": 4683,
-            "total_count": 457659
+            "total_count": 457673
           },
           {
             "name": "漫画改",
             "count": 3225,
-            "total_count": 869530
+            "total_count": 869587
           },
           {
             "name": "2019年1月",
@@ -13157,22 +13157,22 @@
           {
             "name": "TV",
             "count": 2351,
-            "total_count": 1414225
+            "total_count": 1414282
           },
           {
             "name": "日常",
             "count": 2315,
-            "total_count": 404014
+            "total_count": 404030
           },
           {
             "name": "漫改",
             "count": 1697,
-            "total_count": 363243
+            "total_count": 363249
           },
           {
             "name": "2019",
             "count": 1566,
-            "total_count": 76937
+            "total_count": 76942
           }
         ],
         "score": 7.8,
@@ -13180,7 +13180,7 @@
         "id": 248175,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 55258,
+        "collection_total": 55259,
         "rank": 355
       },
       "subject_id": 248175,
@@ -15479,7 +15479,7 @@
           {
             "name": "OAD",
             "count": 687,
-            "total_count": 35382
+            "total_count": 35390
           },
           {
             "name": "约会大作战",
@@ -15489,22 +15489,22 @@
           {
             "name": "后宫",
             "count": 607,
-            "total_count": 305556
+            "total_count": 305571
           },
           {
             "name": "OVA",
             "count": 528,
-            "total_count": 367204
+            "total_count": 367232
           },
           {
             "name": "轻小说改",
             "count": 413,
-            "total_count": 499180
+            "total_count": 499204
           },
           {
             "name": "2014",
             "count": 313,
-            "total_count": 71555
+            "total_count": 71562
           },
           {
             "name": "ProductionIMS",
@@ -15514,7 +15514,7 @@
           {
             "name": "恋爱",
             "count": 239,
-            "total_count": 569033
+            "total_count": 569057
           },
           {
             "name": "2014年12月",
@@ -15532,7 +15532,7 @@
         "id": 98693,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 7111,
+        "collection_total": 7112,
         "rank": 3440
       },
       "subject_id": 98693,
@@ -15563,7 +15563,7 @@
           {
             "name": "后宫",
             "count": 2627,
-            "total_count": 305556
+            "total_count": 305571
           },
           {
             "name": "约会大作战",
@@ -15573,7 +15573,7 @@
           {
             "name": "轻小说改",
             "count": 1637,
-            "total_count": 499180
+            "total_count": 499204
           },
           {
             "name": "2014年4月",
@@ -15583,12 +15583,12 @@
           {
             "name": "TV",
             "count": 1098,
-            "total_count": 1414147
+            "total_count": 1414281
           },
           {
             "name": "战斗",
             "count": 923,
-            "total_count": 476043
+            "total_count": 476054
           },
           {
             "name": "ProductionIMS",
@@ -15598,17 +15598,17 @@
           {
             "name": "恋爱",
             "count": 757,
-            "total_count": 569033
+            "total_count": 569057
           },
           {
             "name": "2014",
             "count": 683,
-            "total_count": 71555
+            "total_count": 71562
           },
           {
             "name": "轻改",
             "count": 579,
-            "total_count": 153216
+            "total_count": 153228
           }
         ],
         "score": 6.1,
@@ -15616,7 +15616,7 @@
         "id": 76325,
         "eps": 10,
         "volumes": 0,
-        "collection_total": 21756,
+        "collection_total": 21757,
         "rank": 7415
       },
       "subject_id": 76325,
@@ -15647,7 +15647,7 @@
           {
             "name": "后宫",
             "count": 4430,
-            "total_count": 305556
+            "total_count": 305571
           },
           {
             "name": "约会大作战",
@@ -15657,12 +15657,12 @@
           {
             "name": "轻小说改",
             "count": 2564,
-            "total_count": 499180
+            "total_count": 499204
           },
           {
             "name": "校园",
             "count": 1902,
-            "total_count": 457641
+            "total_count": 457672
           },
           {
             "name": "2013年4月",
@@ -15672,27 +15672,27 @@
           {
             "name": "TV",
             "count": 1594,
-            "total_count": 1414147
+            "total_count": 1414281
           },
           {
             "name": "战斗",
             "count": 1374,
-            "total_count": 476043
+            "total_count": 476054
           },
           {
             "name": "AIC",
             "count": 1221,
-            "total_count": 18395
+            "total_count": 18397
           },
           {
             "name": "2013",
             "count": 978,
-            "total_count": 69247
+            "total_count": 69255
           },
           {
             "name": "科幻",
             "count": 837,
-            "total_count": 254781
+            "total_count": 254798
           }
         ],
         "score": 6.7,
@@ -15700,7 +15700,7 @@
         "id": 49131,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 34278,
+        "collection_total": 34279,
         "rank": 4227
       },
       "subject_id": 49131,
@@ -16991,27 +16991,27 @@
           {
             "name": "剧场版",
             "count": 2716,
-            "total_count": 728840
+            "total_count": 728901
           },
           {
             "name": "恋爱",
-            "count": 2134,
-            "total_count": 568992
+            "count": 2135,
+            "total_count": 569059
           },
           {
             "name": "科幻",
             "count": 1827,
-            "total_count": 254766
+            "total_count": 254799
           },
           {
             "name": "原创",
-            "count": 1778,
-            "total_count": 624919
+            "count": 1779,
+            "total_count": 624987
           },
           {
             "name": "2019",
             "count": 1172,
-            "total_count": 76929
+            "total_count": 76942
           },
           {
             "name": "Graphinica",
@@ -17030,8 +17030,8 @@
           },
           {
             "name": "校园",
-            "count": 422,
-            "total_count": 457600
+            "count": 423,
+            "total_count": 457673
           },
           {
             "name": "2019年10月",
@@ -17075,7 +17075,7 @@
           {
             "name": "J.C.STAFF",
             "count": 2958,
-            "total_count": 137498
+            "total_count": 137514
           },
           {
             "name": "とある魔術の禁書目録",
@@ -17095,12 +17095,12 @@
           {
             "name": "魔法禁书目录",
             "count": 1447,
-            "total_count": 6195
+            "total_count": 6196
           },
           {
             "name": "TV",
             "count": 1361,
-            "total_count": 1414147
+            "total_count": 1414282
           },
           {
             "name": "当妈",
@@ -17110,17 +17110,17 @@
           {
             "name": "轻小说改",
             "count": 1012,
-            "total_count": 499181
+            "total_count": 499204
           },
           {
             "name": "战斗",
             "count": 938,
-            "total_count": 476043
+            "total_count": 476054
           },
           {
             "name": "魔法",
             "count": 839,
-            "total_count": 20163
+            "total_count": 20165
           }
         ],
         "score": 6.7,
@@ -17411,12 +17411,12 @@
           {
             "name": "恋爱",
             "count": 2856,
-            "total_count": 568977
+            "total_count": 569059
           },
           {
             "name": "校园",
             "count": 1768,
-            "total_count": 457591
+            "total_count": 457673
           },
           {
             "name": "狗粮",
@@ -17426,27 +17426,27 @@
           {
             "name": "日常",
             "count": 1333,
-            "total_count": 403976
+            "total_count": 404030
           },
           {
             "name": "2019年7月",
             "count": 1185,
-            "total_count": 21223
+            "total_count": 21224
           },
           {
             "name": "漫画改",
             "count": 1140,
-            "total_count": 869412
+            "total_count": 869587
           },
           {
             "name": "TV",
             "count": 884,
-            "total_count": 1414035
+            "total_count": 1414282
           },
           {
             "name": "搞笑",
             "count": 849,
-            "total_count": 643403
+            "total_count": 643473
           },
           {
             "name": "SHIN-EI",
@@ -17464,7 +17464,7 @@
         "id": 271151,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 21346,
+        "collection_total": 21347,
         "rank": 474
       },
       "subject_id": 271151,
@@ -17884,7 +17884,7 @@
         "id": 10440,
         "eps": 11,
         "volumes": 0,
-        "collection_total": 52279,
+        "collection_total": 52280,
         "rank": 819
       },
       "subject_id": 10440,
@@ -17999,12 +17999,12 @@
           {
             "name": "剧场版",
             "count": 4989,
-            "total_count": 728840
+            "total_count": 728901
           },
           {
             "name": "京阿尼",
             "count": 4900,
-            "total_count": 215122
+            "total_count": 215133
           },
           {
             "name": "轻音",
@@ -18019,32 +18019,32 @@
           {
             "name": "治愈",
             "count": 2170,
-            "total_count": 303648
+            "total_count": 303671
           },
           {
             "name": "校园",
             "count": 1646,
-            "total_count": 457601
+            "total_count": 457672
           },
           {
             "name": "2011",
-            "count": 1631,
-            "total_count": 53236
+            "count": 1632,
+            "total_count": 53243
           },
           {
             "name": "百合",
             "count": 1514,
-            "total_count": 406155
+            "total_count": 406197
           },
           {
             "name": "萌",
             "count": 1456,
-            "total_count": 71600
+            "total_count": 71604
           },
           {
             "name": "山田尚子",
             "count": 1412,
-            "total_count": 19218
+            "total_count": 19237
           }
         ],
         "score": 8.4,
@@ -18052,7 +18052,7 @@
         "id": 12426,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 34254,
+        "collection_total": 34255,
         "rank": 64
       },
       "subject_id": 12426,
@@ -18083,17 +18083,17 @@
           {
             "name": "京阿尼",
             "count": 7752,
-            "total_count": 215132
+            "total_count": 215133
           },
           {
             "name": "校园",
             "count": 4521,
-            "total_count": 457654
+            "total_count": 457672
           },
           {
             "name": "萌",
             "count": 3724,
-            "total_count": 71601
+            "total_count": 71604
           },
           {
             "name": "K-ON!",
@@ -18103,12 +18103,12 @@
           {
             "name": "治愈",
             "count": 3037,
-            "total_count": 303666
+            "total_count": 303671
           },
           {
             "name": "日常",
             "count": 2662,
-            "total_count": 404012
+            "total_count": 404030
           },
           {
             "name": "2010年4月",
@@ -18123,12 +18123,12 @@
           {
             "name": "TV",
             "count": 1975,
-            "total_count": 1414207
+            "total_count": 1414281
           },
           {
             "name": "漫画改",
             "count": 1862,
-            "total_count": 869522
+            "total_count": 869587
           }
         ],
         "score": 8.4,
@@ -18136,7 +18136,7 @@
         "id": 3774,
         "eps": 26,
         "volumes": 0,
-        "collection_total": 49852,
+        "collection_total": 49853,
         "rank": 56
       },
       "subject_id": 3774,
@@ -18177,7 +18177,7 @@
           {
             "name": "校园",
             "count": 5200,
-            "total_count": 457669
+            "total_count": 457672
           },
           {
             "name": "轻音",
@@ -18187,17 +18187,17 @@
           {
             "name": "萌",
             "count": 3623,
-            "total_count": 71602
+            "total_count": 71604
           },
           {
             "name": "治愈",
             "count": 3512,
-            "total_count": 303669
+            "total_count": 303671
           },
           {
             "name": "日常",
             "count": 3027,
-            "total_count": 404026
+            "total_count": 404030
           },
           {
             "name": "2009年4月",
@@ -18207,7 +18207,7 @@
           {
             "name": "TV",
             "count": 2343,
-            "total_count": 1414279
+            "total_count": 1414281
           },
           {
             "name": "废萌",
@@ -18220,7 +18220,7 @@
         "id": 1424,
         "eps": 14,
         "volumes": 0,
-        "collection_total": 61657,
+        "collection_total": 61658,
         "rank": 101
       },
       "subject_id": 1424,
@@ -18304,7 +18304,7 @@
         "id": 114685,
         "eps": 13,
         "volumes": 0,
-        "collection_total": 29129,
+        "collection_total": 29130,
         "rank": 2521
       },
       "subject_id": 114685,
@@ -18724,7 +18724,7 @@
         "id": 172498,
         "eps": 12,
         "volumes": 0,
-        "collection_total": 40214,
+        "collection_total": 40215,
         "rank": 4781
       },
       "subject_id": 172498,
@@ -19564,7 +19564,7 @@
         "id": 117777,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 31427,
+        "collection_total": 31428,
         "rank": 2319
       },
       "subject_id": 117777,
@@ -19900,7 +19900,7 @@
         "id": 58949,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 31808,
+        "collection_total": 31809,
         "rank": 1075
       },
       "subject_id": 58949,
@@ -19961,7 +19961,7 @@
           {
             "name": "恋爱",
             "count": 1826,
-            "total_count": 569057
+            "total_count": 569058
           },
           {
             "name": "秒速5センチメートル",
@@ -19984,7 +19984,7 @@
         "id": 927,
         "eps": 3,
         "volumes": 0,
-        "collection_total": 46109,
+        "collection_total": 46111,
         "rank": 307
       },
       "subject_id": 927,
@@ -20068,7 +20068,7 @@
         "id": 269235,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 35129,
+        "collection_total": 35130,
         "rank": 1975
       },
       "subject_id": 269235,
@@ -20104,17 +20104,17 @@
           {
             "name": "剧场版",
             "count": 7874,
-            "total_count": 728900
+            "total_count": 728901
           },
           {
             "name": "恋爱",
             "count": 6849,
-            "total_count": 569056
+            "total_count": 569058
           },
           {
             "name": "原创",
             "count": 3702,
-            "total_count": 624982
+            "total_count": 624985
           },
           {
             "name": "2016",
@@ -20129,7 +20129,7 @@
           {
             "name": "奇幻",
             "count": 2809,
-            "total_count": 476465
+            "total_count": 476469
           },
           {
             "name": "动画电影",
@@ -20152,7 +20152,7 @@
         "id": 160209,
         "eps": 1,
         "volumes": 0,
-        "collection_total": 60852,
+        "collection_total": 60854,
         "rank": 181
       },
       "subject_id": 160209,
