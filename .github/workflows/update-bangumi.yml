@@ -12,6 +12,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "bangumi-fetch"
+  cancel-in-progress: true
+
 jobs:
   fetch-and-deploy:
     runs-on: ubuntu-latest
