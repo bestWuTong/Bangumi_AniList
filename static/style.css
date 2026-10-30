@@ -648,6 +648,35 @@ body {
     transform: translateY(-1px);
 }
 
+/* 时光机入口 */
+.tm-entry-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 18px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #33244d;
+    background: linear-gradient(102deg, #a8ddff, #cfc0ff 46%, #ffbddb);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 6px 18px rgba(60, 20, 90, 0.22);
+    transition: all 0.18s var(--transition);
+}
+
+.tm-entry-btn svg {
+    flex-shrink: 0;
+    opacity: 0.85;
+}
+
+.tm-entry-btn:hover {
+    background: linear-gradient(102deg, #c3e7ff, #e0d4ff 46%, #ffcfe5);
+    box-shadow: 0 10px 26px rgba(60, 20, 90, 0.3);
+    transform: translateY(-2px);
+}
+
 /* 词云弹窗 */
 .wc-modal {
     max-width: 900px;
@@ -782,6 +811,16 @@ footer a:hover {
 
     .header-right {
         width: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .tm-entry-btn,
+    .wordcloud-btn,
+    .bangumi-btn {
+        padding: 8px 14px;
+        font-size: 0.82rem;
     }
 
     .avatar-link {
