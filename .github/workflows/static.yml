@@ -28,22 +28,37 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
+  # 打包与上传必须单独成一个 job：
+  # GitHub 的产物索引是最终一致的，上传(finalize)后立刻查询可能返回 0 个，
+  # deploy-pages 会报 "No artifacts named github-pages were found for this workflow run"。
+  # 参考 actions/deploy-pages#451。
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          # Upload entire repository
+          path: '.'
+
   deploy:
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
+      # 跨 job 本身会隔开几秒，这里再补一段缓冲，给产物索引留出同步时间。
+      # 如果 GitHub 修好这个竞态（issue #451），这一段可以删掉。
+      - name: Wait for artifact index to settle
+        run: sleep 15
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
